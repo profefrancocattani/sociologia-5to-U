@@ -9,3 +9,4 @@ Dashboard de fichas H-07, H-08, H-09, H-10, H-21 y H-22 (Sociología 5º).
 - [H-10 · El orden de mérito](https://profefrancocattani.github.io/sociologia-5to-U/h10-el-orden-de-merito.html)
 - [H-21 · No escucho eso](https://profefrancocattani.github.io/sociologia-5to-U/h21-no-escucho-eso.html)
 - [H-22 · De regular cuerpos a seducir psiques](https://profefrancocattani.github.io/sociologia-5to-U/h22-de-regular-cuerpos-a-seducir-psiques.html)
+- [H-24 · ¿Y si borramos todo?](https://profefrancocattani.github.io/sociologia-5to-U/h24-y-si-borramos-todo.html)
