@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>h-24 · ¿Y si borramos todo? · Reglas · anomia · autogobierno · Sociología 5.º</title>
+<!-- Serie H · proyectable h-24 (par de H-24-ficha.html). Molde h-01.html. Archivo único, sin dependencias.
+     Minutos = ficha: §1 3 · §2 16 · §3 14 · §4 5 (módulo 1: 38 + 2 de margen) · §5 35 · §6 30 · §7 5 (módulo 2: 70).
+     La síntesis (modo estudio) se marca «publicar después de la clase». -->
+<style>
+  :root{
+    --tinta:#000; --papel:#fff;
+    --filete:0.5px solid var(--tinta);
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+    --rail: 104px;
+  }
+  html.invertido{ --tinta:#fff; --papel:#000; }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ height:100%; }
+  body{
+    background:var(--papel); color:var(--tinta);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    overflow:hidden;
+  }
+  body.estudio{ overflow:auto; }
+
+  /* ---------------- RAIL DE APARATO ---------------- */
+  .rail{
+    position:fixed; top:0; left:0; bottom:0; width:var(--rail);
+    border-right:var(--filete);
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:20px 14px 16px; text-align:right;
+    font-family:var(--sans); z-index:20; background:var(--papel);
+  }
+  .sigla{ font-size:22px; font-weight:700; letter-spacing:.04em; }
+  .sigla small{ display:block; font-size:8px; letter-spacing:.2em; font-weight:400;
+                text-transform:uppercase; margin-top:6px; line-height:1.6; }
+  .aparato .par{ font-size:34px; font-weight:700; line-height:1; }
+  .aparato .op{ font-size:9px; letter-spacing:.15em; text-transform:uppercase;
+                margin-top:8px; line-height:1.5; }
+  .reloj{ border-top:var(--filete); padding-top:8px; }
+  .reloj .t{ font-size:26px; font-variant-numeric:tabular-nums; letter-spacing:-.02em; line-height:1; }
+  .reloj .presu{ font-size:9px; letter-spacing:.14em; text-transform:uppercase; margin-top:6px; }
+  .reloj.vencido{ border-top:2.5px solid var(--tinta); }
+  .reloj.vencido .t{ animation:lat 1.4s steps(1,end) infinite; }
+  @keyframes lat{ 50%{ opacity:.25 } }
+  .reloj.pausa .t{ opacity:.4; }
+
+  /* ---------------- ESCENARIO ---------------- */
+  .escenario{ margin-left:var(--rail); height:100vh; position:relative; }
+  .blk{
+    position:absolute; inset:0; display:none;
+    flex-direction:column; justify-content:center;
+    padding:5vh 6vw 11vh 5vw;
+  }
+  .blk.on{ display:flex; }
+
+  .rotulo{
+    font-family:var(--sans); font-size:11px; letter-spacing:.22em;
+    text-transform:uppercase; padding-bottom:10px; margin-bottom:26px;
+    border-bottom:var(--filete);
+  }
+  h1{ font-family:var(--serif); font-weight:400; letter-spacing:-.02em; line-height:1.02;
+      font-size:clamp(34px, 6.2vw, 96px); }
+  h2{ font-family:var(--serif); font-weight:400; letter-spacing:-.015em; line-height:1.08;
+      font-size:clamp(26px, 3.9vw, 60px); margin-bottom:.5em; }
+  .bajada{ font-style:italic; font-size:clamp(15px, 1.55vw, 26px); line-height:1.5;
+           max-width:34em; margin-top:1.1em; }
+  p.cuerpo{ font-size:clamp(15px, 1.5vw, 25px); line-height:1.55; max-width:32em; }
+  .mini{ font-family:var(--sans); font-size:11px; letter-spacing:.16em;
+         text-transform:uppercase; margin-top:2.4em; padding-top:10px;
+         border-top:var(--filete); max-width:32em; }
+
+  .paso{ opacity:0; transform:translateY(9px); transition:opacity .34s ease, transform .34s ease; }
+  .paso.vis{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .paso{ transition:none; } }
+
+  /* ---------------- PILAS (§1) ---------------- */
+  .pilas{ display:flex; gap:2.2vw; margin-top:1em; }
+  .pila{ flex:1; border:var(--filete); padding:1.1em 1.1em 2.6em;
+         font-family:var(--sans); font-size:clamp(11px,1.15vw,17px);
+         letter-spacing:.11em; text-transform:uppercase; }
+
+  /* ---------------- ETIMOLOGÍA (§2) ---------------- */
+  .etim{ text-align:center; }
+  .raiz{ font-size:clamp(46px, 11vw, 168px); letter-spacing:.02em; line-height:1; }
+  .glosa{ font-family:var(--sans); font-size:clamp(11px,1.2vw,17px);
+          letter-spacing:.3em; text-transform:uppercase; margin-top:1.1em; }
+  .ecuacion{ display:flex; align-items:center; justify-content:center; gap:1.4vw;
+             flex-wrap:wrap; margin-top:2.2em; font-size:clamp(17px,2.1vw,34px); }
+  .hueco{ border:2px dashed currentColor; padding:.28em 1.5em; font-style:italic; }
+
+  /* ---------------- CRONOLOGÍA (§3 · §4) ---------------- */
+  .crono{ display:flex; gap:1.4vw; margin-top:1.4em; align-items:stretch; }
+  .hito{ flex:1; border:var(--filete); padding:1.1em 1.1em 1.3em; display:flex; flex-direction:column; }
+  .hito.abierto{ border-style:dashed; }
+  .hito .anio{ font-family:var(--sans); font-size:clamp(12px,1.3vw,20px); font-weight:700;
+               letter-spacing:.06em; padding-bottom:.55em; margin-bottom:.75em;
+               border-bottom:var(--filete); }
+  .hito p{ font-size:clamp(12px,1.15vw,19px); line-height:1.48; }
+  .hito .interrog{ font-size:clamp(30px,4vw,64px); text-align:center; margin:auto 0; font-style:italic; }
+  .hito.abierto.resuelto{ border-style:solid; }
+
+  /* ---------------- FUENTE (§5) ---------------- */
+  .fuente{ border:var(--filete); border-left-width:5px; padding:1.3em 1.6em; max-width:26em; }
+  .fuente .ref{ font-family:var(--sans); font-size:11px; letter-spacing:.15em;
+                text-transform:uppercase; margin-bottom:.9em; line-height:1.7; }
+  .fuente q{ font-size:clamp(20px,2.6vw,42px); font-style:italic; quotes:"«" "»"; }
+  ol.preguntas{ margin-top:1.6em; max-width:30em; list-style:none; counter-reset:p; }
+  ol.preguntas li{ counter-increment:p; padding:.62em 0 .62em 2.4em; position:relative;
+                   border-top:var(--filete); font-size:clamp(14px,1.4vw,23px); line-height:1.45; }
+  ol.preguntas li::before{ content:counter(p); position:absolute; left:0; top:.62em;
+                           font-family:var(--sans); font-weight:700; font-size:.8em; }
+
+  /* ---------------- BARRA DE TIEMPO ---------------- */
+  .barra{ position:fixed; left:var(--rail); right:0; bottom:0; height:34px;
+          border-top:var(--filete); display:flex; background:var(--papel); z-index:20; }
+  .seg{ border-right:var(--filete); display:flex; align-items:center; justify-content:center;
+        font-family:var(--sans); font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+        opacity:.35; cursor:pointer; }
+  .seg:last-child{ border-right:none; }
+  .seg.act{ opacity:1; box-shadow:inset 0 3px 0 var(--tinta); }
+  .seg.hecho{ opacity:.62; }
+
+  .atajos{ position:fixed; right:14px; bottom:44px; font-family:var(--sans);
+           font-size:9px; letter-spacing:.13em; text-transform:uppercase; opacity:.4; z-index:20; }
+
+  /* ---------------- MODO ESTUDIO ---------------- */
+  body.estudio .rail,
+  body.estudio .barra,
+  body.estudio .atajos{ display:none; }
+  body.estudio .escenario{ margin-left:0; height:auto; }
+  body.estudio .blk{
+    position:static; display:block; min-height:0;
+    padding:38px 24px 44px; border-bottom:var(--filete);
+    max-width:760px; margin:0 auto;
+  }
+  body.estudio .paso{ opacity:1; transform:none; }
+  body.estudio .blk:first-of-type{ padding-top:76px; }
+  body.estudio h1{ font-size:clamp(30px,7vw,46px); }
+  body.estudio h2{ font-size:clamp(22px,5.4vw,32px); }
+  body.estudio p.cuerpo,
+  body.estudio .bajada{ font-size:17px; }
+  body.estudio .crono,
+  body.estudio .pilas{ flex-direction:column; gap:12px; }
+  body.estudio .raiz{ font-size:clamp(40px,13vw,74px); }
+  body.estudio .hito .interrog{ margin:.3em 0; }
+  #sintesis{ display:none; }
+  body.estudio #sintesis{ display:block; }
+  #sintesis h3{ font-family:var(--sans); font-size:11px; letter-spacing:.2em;
+                text-transform:uppercase; margin:1.9em 0 .5em; }
+  #sintesis p{ font-size:17px; line-height:1.62; margin-bottom:.7em; }
+  #sintesis .nota{ font-size:14px; font-style:italic; opacity:.8; }
+
+  .conmutador{
+    position:fixed; top:12px; right:12px; z-index:40;
+    font-family:var(--sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase;
+    background:var(--papel); color:var(--tinta); border:var(--filete);
+    padding:9px 13px; cursor:pointer;
+  }
+  .conmutador:focus-visible, .seg:focus-visible{ outline:2px solid currentColor; outline-offset:2px; }
+
+  @media (max-width: 860px){
+    .conmutador{ font-size:11px; padding:11px 15px; }
+  }
+
+  /* ---------------- H-24 · agregados ---------------- */
+  .cartel{ border:3px solid var(--tinta); padding:1.1em 1.6em; max-width:24em; text-align:center; }
+  .cartel q{ font-size:clamp(24px,3.6vw,58px); font-style:italic; quotes:"«" "»"; line-height:1.15; }
+  .cartel .ref{ font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase; margin-top:1em; }
+  ol.preguntas.cortas li{ font-size:clamp(13px,1.25vw,21px); }
+  ol.preguntas li b{ font-family:var(--sans); font-size:.72em; letter-spacing:.12em; text-transform:uppercase; display:block; margin-bottom:.2em; }
+  .pila.alta{ padding-bottom:4.4em; }
+  .pila small{ display:block; text-transform:none; letter-spacing:0; font-family:var(--serif); font-size:.95em; margin-top:.6em; }
+  .justa{ border-top:var(--filete); border-bottom:var(--filete); padding:.5em 0; margin-top:1em;
+          font-size:clamp(24px,3.4vw,54px); font-style:italic; }
+  .aviso{ border:2px dashed currentColor; padding:.8em 1em; font-family:var(--sans); font-size:12px;
+          letter-spacing:.08em; text-transform:uppercase; line-height:1.6; margin-bottom:1.4em; }
+  body.estudio .cartel q{ font-size:28px; }
+  body.estudio .justa{ font-size:26px; }
+</style>
+</head>
+<body>
+<button class="conmutador" id="btnModo">Modo estudio</button>
+
+<aside class="rail">
+  <div class="sigla">h&#8209;24<small>Sociología<br>5.º</small></div>
+  <div class="aparato">
+    <div class="par" id="rPar">—</div>
+    <div class="op" id="rOp">Portada</div>
+  </div>
+  <div class="reloj" id="reloj">
+    <div class="t" id="rT">00:00</div>
+    <div class="presu" id="rP">sin tope</div>
+  </div>
+</aside>
+
+<main class="escenario" id="escenario">
+
+  <!-- 0 · PORTADA -->
+  <section class="blk on" data-op="Portada" data-min="0">
+    <div class="rotulo">Sociología · 5.º · Reglas · anomia · autogobierno · Hoja H-24</div>
+    <h1>¿Y si borramos todo?</h1>
+    <p class="bajada">La escuela elimina todas las reglas.<br>
+    Lección siguiente a «La mala educación».</p>
+    <p class="mini">Duración sugerida: dos módulos (lectura y pausa en el primero; grupos y plenario en el segundo) · En la mesa: la hoja H-24</p>
+  </section>
+
+  <!-- §1 · ESCUCHAR · 3 -->
+  <section class="blk" data-par="§1" data-op="Escuchar" data-min="3">
+    <div class="rotulo">Módulo 1 · §1 · Escuchar · 3 min</div>
+    <div class="cartel">
+      <q>A partir de hoy quedan eliminadas todas las reglas</q>
+      <div class="ref">Cartel firmado por la dirección</div>
+    </div>
+    <p class="cuerpo paso" data-p="1" style="margin-top:1.6em"><b>Pero la pregunta de hoy es otra:</b>
+    ¿qué pasaría el martes? ¿Y el jueves? ¿Y dentro de un mes?</p>
+    <p class="mini paso" data-p="1">En la hoja, §1: el cartel del lunes</p>
+  </section>
+
+  <!-- §2 · LEER · 16 -->
+  <section class="blk" data-par="§2" data-op="Leer" data-min="16">
+    <div class="rotulo">§2 · Leer · 16 min · Material de lectura, apartados 1 a 4</div>
+    <ol class="preguntas cortas">
+      <li class="paso" data-p="1"><b>1 · Un lunes cualquiera</b>«A partir de hoy quedan eliminadas todas las reglas».</li>
+      <li class="paso" data-p="2"><b>2 · Las reglas no son solo las que están escritas</b>No se pueden eliminar todas las reglas. Se pueden eliminar las reglas escritas y los castigos oficiales.</li>
+      <li class="paso" data-p="3"><b>2 · Durkheim · hechos sociales</b>Existen fuera de cada persona, vienen antes que ella y ejercen presión aunque uno no las haya elegido.</li>
+      <li class="paso" data-p="4"><b>3 · Anomia</b>No quiere decir «libertad». Quiere decir desorientación.</li>
+    </ol>
+    <div class="crono paso" data-p="5">
+      <div class="hito"><span class="anio">4 · «El señor de las moscas» · 1954 · novela</span>
+        <p>Las reglas iniciales se rompieron y las reemplazó la ley del más fuerte.</p></div>
+      <div class="hito"><span class="anio">4 · 'Ata · 1965 · historia real</span>
+        <p>Los chicos crearon sus propias reglas, las sostuvieron y las ajustaron.</p></div>
+    </div>
+  </section>
+
+  <!-- §3 · LEER · 14 -->
+  <section class="blk" data-par="§3" data-op="Leer" data-min="14">
+    <div class="rotulo">§3 · Leer · 14 min · Material de lectura, apartados 5 a 7</div>
+    <div class="crono paso" data-p="1" style="margin-top:0">
+      <div class="hito"><span class="anio">5 · Summerhill · 1921</span>
+        <p>Cada persona, alumno o docente, tiene un voto.</p></div>
+      <div class="hito"><span class="anio">5 · Elinor Ostrom · Nobel 2009</span>
+        <p>Una regla funciona mejor cuando los que tienen que cumplirla participaron en hacerla.</p></div>
+    </div>
+    <div class="pilas paso" data-p="2">
+      <div class="pila">6 · Para cuidar<small>a los más débiles</small></div>
+      <div class="pila">6 · Para coordinar</div>
+      <div class="pila">6 · Para repartir<small>lo que es escaso</small></div>
+      <div class="pila">6 · Previsibilidad</div>
+    </div>
+    <p class="cuerpo paso" data-p="3" style="margin-top:1.2em"><b>¿Quién hace las reglas?, ¿a quién benefician?,
+    ¿se pueden discutir y cambiar?, ¿se aplican igual para todos?</b></p>
+    <p class="cuerpo paso" data-p="4" style="margin-top:.8em">7 · «Así no se puede». Ahí empieza la política en su sentido más básico: decidir juntos cómo queremos vivir.</p>
+  </section>
+
+  <!-- §4 · INFERIR · 5 -->
+  <section class="blk" data-par="§4" data-op="Inferir" data-min="5">
+    <div class="rotulo">§4 · Inferir · 5 min · Pausa, individual y por escrito</div>
+    <h2>Pensá en el lunes del cartel y anotá:</h2>
+    <div class="pilas">
+      <div class="pila alta paso" data-p="1">Mejora<small>Una cosa que mejora si la escuela elimina todas las reglas.</small></div>
+      <div class="pila alta paso" data-p="1">Empeora<small>Una cosa que empeora.</small></div>
+    </div>
+    <p class="mini paso" data-p="2">Guardá lo que escribiste: lo vas a usar en el grupo · En la hoja, §4</p>
+  </section>
+
+  <!-- MÓDULO 2 · separador sin minutos -->
+  <section class="blk" data-op="Módulo 2" data-min="0">
+    <div class="rotulo">Módulo 2 · §5 a §7 · 35 + 30 + 5 = 70 min</div>
+    <h1>¿Qué reglas nos pondríamos nosotros?</h1>
+    <p class="bajada">No las que queremos que cumplan los demás, sino las que estaríamos dispuestos a cumplir y a hacer cumplir.</p>
+  </section>
+
+  <!-- §5 · REDACTAR · 35 · con música -->
+  <section class="blk" data-par="§5" data-op="Redactar" data-min="35">
+    <div class="rotulo">§5 · Redactar · 35 min · grupos de 4 · con música</div>
+    <ol class="preguntas cortas">
+      <li class="paso" data-p="1">Pongan en común las respuestas de la pausa. Hagan dos listas: lo que mejora y lo que empeora. Marquen las que se repiten.</li>
+      <li class="paso" data-p="2">Miren la lista de lo que empeora. Para cada problema, pregúntense qué regla evitaría ese problema sin volver a todo lo que había antes.</li>
+      <li class="paso" data-p="3">Redacten entre tres y cinco reglas para la nueva escuela. Cada regla tiene que tener:</li>
+    </ol>
+    <div class="pilas paso" data-p="3">
+      <div class="pila">Qué dice<small>en una oración clara</small></div>
+      <div class="pila">Qué problema resuelve</div>
+      <div class="pila">Qué pasa si alguien no la cumple</div>
+      <div class="pila">Quién decide si se cumplió o no</div>
+    </div>
+    <ol class="preguntas cortas" start="4" style="counter-reset:p 3">
+      <li class="paso" data-p="4">Elijan una regla actual de la escuela que conservarían tal como está y expliquen por qué.</li>
+      <li class="paso" data-p="5">Revisen sus reglas con estas preguntas del texto: ¿a quién benefician?, ¿se aplican igual para todos?, ¿se pueden cambiar? ¿Cómo?</li>
+    </ol>
+    <p class="mini paso" data-p="6">Una persona del grupo toma nota y otra va a presentar en el plenario · En la hoja: Toma nota / Presenta</p>
+  </section>
+
+  <!-- §6 · DEBATIR · 30 -->
+  <section class="blk" data-par="§6" data-op="Debatir" data-min="30">
+    <div class="rotulo">§6 · Debatir · 30 min · plenario, todo el curso</div>
+    <p class="cuerpo paso" data-p="1">Cada grupo lee sus reglas en voz alta. El docente o un alumno las escribe en el pizarrón y junta las que se parecen.</p>
+    <ol class="preguntas cortas">
+      <li class="paso" data-p="2">¿Qué reglas aparecieron en casi todos los grupos? ¿Por qué creen que se repiten?</li>
+      <li class="paso" data-p="3">¿Alguna regla nueva se parece mucho a una que ya existe? ¿Qué cambia si la elegimos nosotros?</li>
+      <li class="paso" data-p="4">¿Nuestra escuela nueva se parece más a la isla de la novela o a la isla de 'Ata? ¿Por qué?</li>
+      <li class="paso" data-p="5">¿Qué pasa con los que no están de acuerdo con una regla votada por la mayoría?</li>
+    </ol>
+    <p class="cuerpo paso" data-p="6" style="margin-top:.8em"><b>Cierre:</b> el curso vota las tres reglas que considera más importantes.</p>
+    <div class="justa paso" data-p="7">Una regla es justa cuando…</div>
+    <p class="mini paso" data-p="7">En la hoja, §6: las tres reglas votadas y la frase escrita entre todos</p>
+  </section>
+
+  <!-- §7 · CERRAR · 5 -->
+  <section class="blk" data-par="§7" data-op="Cerrar" data-min="5">
+    <div class="rotulo">§7 · Cerrar · 5 min · para la carpeta, cierre individual</div>
+    <h2 style="max-width:18em">Después de la clase, ¿cambió lo que pensabas en la pausa sobre qué mejora y qué empeora sin reglas? ¿Por qué?</h2>
+    <p class="mini">En no más de cinco renglones · En la hoja, §7</p>
+  </section>
+
+  <!-- SÍNTESIS · SÓLO EN MODO ESTUDIO · PUBLICAR DESPUÉS DE LA CLASE -->
+  <!-- Aviso de publicación (manual §6): esta sección se muestra solo en modo estudio.
+       Subir este archivo al repositorio DESPUÉS de dar la clase. -->
+  <section class="blk" id="sintesis">
+    <div class="rotulo">Para estudiar · síntesis de H-24</div>
+    <div class="aviso">Publicar después de la clase</div>
+
+    <h3>1 · Un lunes cualquiera</h3>
+    <p>Un cartel firmado por la dirección: «A partir de hoy quedan eliminadas todas las reglas». La pregunta de hoy es otra: ¿qué pasaría el martes? ¿Y el jueves? ¿Y dentro de un mes?</p>
+
+    <h3>2 · Las reglas no son solo las que están escritas</h3>
+    <p>No se pueden eliminar todas las reglas. Se pueden eliminar las reglas escritas y los castigos oficiales. Pero la vida en grupo está llena de normas que nadie escribió y que igual se cumplen.</p>
+    <p>Émile Durkheim decía que las normas son «hechos sociales». Existen fuera de cada persona, vienen antes que ella y ejercen presión aunque uno no las haya elegido.</p>
+
+    <h3>3 · Anomia</h3>
+    <p>No quiere decir «libertad». Quiere decir desorientación. La falta de reglas no reparte la libertad de manera pareja.</p>
+
+    <h3>4 · Dos historias sobre chicos sin adultos</h3>
+    <p>En ninguna de las dos hubo «cero reglas». En la novela, las reglas iniciales se rompieron y las reemplazó la ley del más fuerte. En la historia real, los chicos crearon sus propias reglas, las sostuvieron y las ajustaron.</p>
+
+    <h3>5 · Escuelas que se autogobiernan</h3>
+    <p>Summerhill (1921): las normas de convivencia se discuten y se votan en una asamblea donde cada persona, alumno o docente, tiene un voto. Elinor Ostrom (Nobel 2009): una regla funciona mejor cuando los que tienen que cumplirla participaron en hacerla.</p>
+
+    <h3>6 · ¿Para qué sirven las reglas?</h3>
+    <p>Para cuidar a los más débiles. Para coordinar. Para repartir lo que es escaso. Para que haya previsibilidad. La pregunta sociológica no es «reglas sí o reglas no», sino: ¿quién hace las reglas?, ¿a quién benefician?, ¿se pueden discutir y cambiar?, ¿se aplican igual para todos?</p>
+
+    <h3>7 · Volver al cartel</h3>
+    <p>Ahí empieza la política en su sentido más básico: decidir juntos cómo queremos vivir.</p>
+
+    <h3>Qué había que hacer en la hoja</h3>
+    <p>§1 escuchar la presentación del cartel. §2 y §3 leer el material (apartados 1 a 7). §4 pausa: una cosa que mejora y una que empeora. §5 en grupo: entre tres y cinco reglas con sus cuatro campos, una regla actual que conservarían, la revisión con las preguntas del texto, quién toma nota y quién presenta. §6 plenario: las tres reglas votadas y la frase «Una regla es justa cuando…». §7 para la carpeta: no más de cinco renglones.</p>
+  </section>
+
+</main>
+
+<div class="barra" id="barra"></div>
+<div class="atajos">← → bloque · espacio revela · T reloj · R reinicia · E estudio · I invertir</div>
+
+<script>
+(function(){
+  var blks = [].slice.call(document.querySelectorAll('.blk:not(#sintesis)'));
+  var i = 0, paso = 0, restante = 0, corriendo = false, tick = null;
+  var rPar=document.getElementById('rPar'), rOp=document.getElementById('rOp'),
+      rT=document.getElementById('rT'), rP=document.getElementById('rP'),
+      reloj=document.getElementById('reloj'), barra=document.getElementById('barra'),
+      btn=document.getElementById('btnModo');
+
+  /* barra proporcional a los minutos de cada bloque */
+  blks.forEach(function(b,n){
+    var m = +(b.dataset.min||0);
+    var s = document.createElement('button');
+    s.className='seg'; s.style.flex = (m||2);
+    s.textContent = b.dataset.par || '·';
+    s.setAttribute('aria-label','Ir a '+(b.dataset.op||'portada'));
+    s.onclick=function(){ ir(n); };
+    barra.appendChild(s);
+  });
+  var segs=[].slice.call(barra.children);
+
+  function pasosDe(b){
+    var ps=[].slice.call(b.querySelectorAll('.paso'));
+    return ps.length ? Math.max.apply(null, ps.map(function(p){return +p.dataset.p;})) : 0;
+  }
+  function pintarPasos(){
+    blks[i].querySelectorAll('.paso').forEach(function(p){
+      p.classList.toggle('vis', +p.dataset.p <= paso);
+    });
+  }
+  function fmt(s){
+    var neg = s<0; s=Math.abs(s);
+    return (neg?'+':'')+String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+  }
+  function pintarReloj(){
+    rT.textContent = fmt(restante);
+    reloj.classList.toggle('vencido', restante<0);
+    reloj.classList.toggle('pausa', !corriendo && restante!==0);
+  }
+  function arrancar(){
+    clearInterval(tick);
+    var m=+(blks[i].dataset.min||0);
+    restante = m*60; corriendo = m>0;
+    rP.textContent = m ? m+' min asignados' : 'sin tope';
+    pintarReloj();
+    if(m) tick=setInterval(function(){ if(corriendo){ restante--; pintarReloj(); } },1000);
+  }
+  function ir(n){
+    if(n<0||n>=blks.length) return;
+    blks[i].classList.remove('on');
+    i=n; paso=0;
+    blks[i].classList.add('on');
+    rPar.textContent = blks[i].dataset.par || '—';
+    rOp.textContent  = blks[i].dataset.op  || '';
+    segs.forEach(function(s,k){
+      s.classList.toggle('act', k===i);
+      s.classList.toggle('hecho', k<i);
+    });
+    pintarPasos(); arrancar();
+  }
+  function avanzar(){
+    if(paso < pasosDe(blks[i])){ paso++; pintarPasos(); } else { ir(i+1); }
+  }
+  function retroceder(){
+    if(paso>0){ paso--; pintarPasos(); } else { ir(i-1); }
+  }
+  function modoEstudio(on){
+    document.body.classList.toggle('estudio', on);
+    btn.textContent = on ? 'Modo clase' : 'Modo estudio';
+    if(on){ clearInterval(tick); corriendo=false; }
+    else { ir(i); window.scrollTo(0,0); }
+  }
+  btn.onclick=function(){ modoEstudio(!document.body.classList.contains('estudio')); };
+
+  document.addEventListener('keydown', function(e){
+    if(document.body.classList.contains('estudio') && ['ArrowRight','ArrowLeft',' '].indexOf(e.key)>=0) return;
+    switch(e.key){
+      case 'ArrowRight': case ' ': e.preventDefault(); avanzar(); break;
+      case 'ArrowLeft': e.preventDefault(); retroceder(); break;
+      case 't': case 'T': corriendo=!corriendo; pintarReloj(); break;
+      case 'r': case 'R': arrancar(); break;
+      case 'e': case 'E': modoEstudio(!document.body.classList.contains('estudio')); break;
+      case 'i': case 'I': document.documentElement.classList.toggle('invertido'); break;
+    }
+  });
+
+  /* en pantalla chica arranca en modo estudio: así se lee en el celular desde el repositorio */
+  if(window.matchMedia('(max-width: 860px)').matches) modoEstudio(true);
+  else ir(0);
+})();
+</script>
+</body>
+</html>
