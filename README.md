@@ -12,3 +12,5 @@ Dashboard de fichas H-07, H-08, H-09, H-10, H-21 y H-22 (Sociología 5º).
 - [H-24 · ¿Y si borramos todo?](https://profefrancocattani.github.io/sociologia-5to-U/h24-y-si-borramos-todo.html)
 - [H-26 · Paisajes de líneas cruzadas](https://profefrancocattani.github.io/sociologia-5to-U/h26-paisajes-de-lineas-cruzadas.html)
 - [H-26 · Paisajes de líneas cruzadas (PDF)](https://profefrancocattani.github.io/sociologia-5to-U/h26-paisajes-de-lineas-cruzadas.pdf)
+- [H-27 · La sociedad del rendimiento](https://profefrancocattani.github.io/sociologia-5to-U/h27-la-sociedad-del-rendimiento.html)
+- [H-27 · La sociedad del rendimiento (PDF)](https://profefrancocattani.github.io/sociologia-5to-U/h27-la-sociedad-del-rendimiento.pdf)

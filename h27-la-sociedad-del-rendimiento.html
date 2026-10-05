@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>H-27 · La sociedad del rendimiento</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #6f6f6f;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .hoja {
+    width: 297mm; height: 210mm;
+    background: #fff;
+    margin: 0 auto 6mm;
+    padding: 10mm 14mm 9mm 20mm;
+    position: relative;
+    overflow: hidden;
+  }
+  .hoja.verso { padding: 10mm 20mm 9mm 14mm; }
+  .cabezal {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    border-bottom: 0.7mm solid #000;
+    padding-bottom: 1.3mm; margin-bottom: 1.1mm;
+  }
+  .sigla {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 19pt; font-weight: 700; letter-spacing: 0.06em; line-height: 1;
+  }
+  .ubic {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 6.5pt; letter-spacing: 0.12em; text-transform: uppercase;
+    text-align: right; line-height: 1.45;
+  }
+  .subcabezal {
+    display: flex; justify-content: space-between; gap: 8mm;
+    border-bottom: 0.25mm solid #000;
+    padding-bottom: 2mm; margin-bottom: 2.4mm;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 7.2pt; letter-spacing: 0.06em;
+  }
+  .campo { flex: 1 1 auto; }
+  .campo span { border-bottom: 0.25mm dotted #000; display: inline-block; min-width: 55mm; }
+  .titulo {
+    font-size: 15.5pt; font-weight: normal; line-height: 1.08;
+    margin: 0 0 1mm; letter-spacing: -0.015em;
+  }
+  .bajada {
+    font-style: italic; font-size: 9pt; line-height: 1.32;
+    margin: 0 0 2.2mm; padding-bottom: 2mm;
+    border-bottom: 0.25mm solid #000;
+  }
+  .cols {
+    display: flex; align-items: stretch; gap: 0;
+  }
+  .col {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    display: flex; flex-direction: column;
+  }
+  .col.izq { padding-right: 5mm; border-right: 0.25mm solid #000; }
+  .col.der { padding-left: 5mm; }
+  h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 7.5pt; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 700; margin: var(--h2mt) 0 1.45mm;
+    padding-bottom: 1.05mm;
+    border-bottom: 0.25mm solid #000;
+  }
+  .col > h2:first-child { margin-top: 0; }
+  p {
+    font-size: var(--pt);
+    line-height: var(--lh);
+    margin: 0 0 var(--mb);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 7 3 3;
+  }
+  p.cortado { margin-bottom: 0; }
+  p.sigue { margin-top: 0; }
+  .pie {
+    position: absolute;
+    left: 20mm; right: 14mm; bottom: 5mm;
+    display: flex; justify-content: space-between;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 6.4pt; letter-spacing: 0.08em;
+    border-top: 0.25mm solid #000;
+    padding-top: 1.3mm;
+  }
+  .verso .pie { left: 14mm; right: 20mm; }
+  .cuerpo { padding-bottom: 7.5mm; }
+
+  .caja {
+    border: 0.35mm solid #000;
+    padding: 2.4mm 2.7mm 2.6mm;
+    margin: 0.4mm 0 var(--mb);
+  }
+  .caja .ctit {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 7.2pt; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    display: block; margin-bottom: 1.3mm; padding-bottom: 0.9mm;
+    border-bottom: 0.25mm solid #000;
+  }
+  .caja p { font-size: calc(var(--pt) - 0.5pt); line-height: calc(var(--lh) - 0.06); margin: 0; }
+  .caja.aviso { border-width: 0.6mm; }
+  .lista { margin: 0; padding: 0; list-style: none; }
+  .lista li {
+    font-size: calc(var(--pt) - 0.6pt); line-height: 1.38;
+    margin: 0 0 0.9mm; padding-left: 3mm; text-indent: -3mm; text-align: left;
+  }
+  .lista li:last-child { margin-bottom: 0; }
+  .lista li::before { content: "· "; }
+  .lista li b { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.9em; letter-spacing: 0.02em; }
+
+  em, i { font-style: italic; }
+  #probe {
+    position: absolute; left: -5000px; top: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  @media print {
+    html, body { background: #fff; }
+    .hoja { margin: 0; break-after: page; page-break-after: always; }
+    .hoja:last-child { break-after: auto; page-break-after: auto; }
+  }
+</style>
+</head>
+<body style="--pt:9.4pt;--lh:1.48;--mb:2.15mm;--h2mt:2.4mm;">
+
+<!-- ===================== PÁGINA 1 ===================== -->
+<section class="hoja p1">
+  <div class="cabezal">
+    <div class="sigla">H-27</div>
+    <div class="ubic">Sociología · 5.º U<br>Lectura · Sociedad del rendimiento</div>
+  </div>
+  <div class="subcabezal">
+    <div class="campo">Nombre <span>&nbsp;</span></div>
+    <div class="campo" style="flex:0 0 42mm; text-align:right;">Fecha <span style="min-width:28mm;">&nbsp;</span></div>
+  </div>
+  <h1 class="titulo">La sociedad del rendimiento</h1>
+  <p class="bajada">Byung-Chul Han y el mandato de poder siempre más.</p>
+  <div class="cuerpo">
+    <div class="cols" style="height:586px;">
+      <div class="col izq">
+<p>Byung-Chul Han publicó <em>La sociedad del cansancio</em> en alemán en 2010 (<em>Müdigkeitsgesellschaft</em>). En castellano circula la edición de Herder. Es un ensayo corto y denso. No es un estudio empírico: no mide ni cuenta casos de salud mental. Propone un diagnóstico de época, una manera de describir cómo funciona una sociedad en un momento.</p><p>Su idea central es esta. Las sociedades occidentales del siglo XXI, dice, ya no se organizan sobre todo por la prohibición y el control de afuera. Se organizan por el mandato de rendir más. Y ese mandato, muchas veces, se vive como libertad. Esa paradoja es el centro del libro.</p><p>Esta lectura recorre cuatro partes de esa tesis. Sirve como lente, un modo de mirar. No como veredicto sobre toda la vida social, ni como reemplazo de un diagnóstico clínico.</p><div class="caja"><span class="ctit">Palabras para esta lectura</span><ul class="lista"><li><b>Sociedad disciplinaria:</b> el poder funciona con el «no», el deber y el castigo (fábrica, cárcel, cuartel, escuela).</li><li><b>Sociedad del rendimiento:</b> el poder funciona con el «poder»: producir, optimizarse, estar disponible.</li><li><b>Sujeto de rendimiento:</b> la persona que se vive como emprendedora de sí misma.</li><li><b>Autoexplotación:</b> explotarse a uno mismo, sin jefe a la vista, y sentirlo como libertad.</li><li><b>Exceso de positividad:</b> demasiado «sí, se puede»: falta el límite y falta la pausa.</li><li><b>Cansancio a solas:</b> un cansancio que aísla: cada uno cae por su lado.</li><li><b>Cansancio curativo:</b> un cansancio que afloja el Yo y devuelve el mundo.</li></ul></div><h2>1. Del deber al poder hacer</h2><p>Han parte de un contraste con Michel Foucault. Foucault estudió la sociedad disciplinaria: fábricas, cárceles, cuarteles y escuelas del siglo XIX y de buena parte del XX. Ahí el poder trabaja con lo negativo. Lo que no se puede. Lo que se debe. Lo que se castiga. El sujeto obedece. Las palabras que mandan son «no» y «deber».</p><p class="cortado">En la sociedad del rendimiento, según Han, el verbo que manda cambia. Ya no es deber: es poder. Frases como «Yes, we can» o «nada es imposible» no son un detalle de publicidad. Son el clima en el que la gente se mueve. Han lo llama exceso de positividad: mucho «sí» y poco</p>
+      </div>
+      <div class="col der">
+<p class="sigue">límite. Antes el límite venía de afuera. Ahora hay una exigencia de sacar el máximo de uno mismo.</p><p>Las instituciones no desaparecen. El hospital, la fábrica o el colegio siguen ahí. Lo que cambia es la presión que se siente normal. Ya no alcanza con no romper las reglas. Hay que producir, optimizarse, estar disponible, mostrar iniciativa. Un ejemplo cercano: el chat que espera respuesta a cualquier hora, o la sensación de que siempre se podría haber estudiado un poco más. Para Han, la prohibición sola no frena la tendencia a convertir a la persona entera en una «máquina de rendimiento»: funcionar sin pausa y sacar el mayor resultado.</p><p>Esto tiene una consecuencia política. Cuando terminaba la sociedad disciplinaria, se podía imaginar una sociedad más libre. Según Han, eso no pasó como se esperaba. Bajó el dominio de afuera, pero la presión no se fue: se mezcló con la libertad. Han habla de libertad obligada. Uno es libre, pero libre de maximizar su rendimiento. La presión ya no llega solo como orden de un superior. Llega como proyecto personal.</p><p>Por eso la idea no se reduce a «hay más trabajo» o «hay más pantallas». El punto es otro. Este poder no necesita, primero, amenazar. Le alcanza con seducir con la imagen de un yo que puede más.</p><h2>2. El sujeto de rendimiento y la autoexplotación</h2><p>El protagonista de esta sociedad no es el obrero con un capataz a la vista. Es el sujeto de rendimiento: alguien que se presenta como emprendedor de sí mismo. Se cree libre porque nadie le da órdenes minuto a minuto. En esa creencia, dice Han, se esconde la forma más eficaz de explotación: la autoexplotación.</p><p>La frase clave del ensayo es dura. El hombre depresivo es un <em>animal laborans</em> que se explota a sí mismo, voluntariamente, sin que nadie lo obligue desde afuera. <em>Animal laborans</em> es latín: el animal que trabaja, la persona reducida a su capacidad de producir. Es, al mismo tiempo, verdugo y víctima. Explotador y explotado son la misma persona.</p><p class="cortado">Han relee el mito de Prometeo. Prometeo está encadenado y un águila le devora el hígado, que vuelve a crecer. Para Han, el sujeto de rendimiento, que se cree libre, está tan encadenado como Prometeo. El águila es su álter ego, otra cara de sí mismo. La relación con el águila es</p>
+      </div>
+    </div>
+  </div>
+  <div class="pie"><span>La sociedad del rendimiento</span><span>H-27 · pág. 1 de 2</span></div>
+</section>
+
+<!-- ===================== PÁGINA 2 ===================== -->
+<section class="hoja verso">
+  <div class="cabezal">
+    <div class="sigla">H-27</div>
+    <div class="ubic">Sociología · 5.º U<br>Lectura · Sociedad del rendimiento</div>
+  </div>
+  <div class="cuerpo" style="padding-top: 1.5mm;">
+    <div class="cols" style="height:669px;">
+      <div class="col izq">
+<p class="sigue">una relación consigo mismo: autoexplotación. El dolor del hígado se vuelve imagen del cansancio. Prometeo queda como figura del que se violenta a sí mismo y está en guerra consigo mismo.</p><p>Funciona tan bien porque parece libertad. La autoexplotación, escribe Han, es más eficaz que la explotación por otros porque viene con un sentimiento de libertad. Han recupera un aforismo de Kafka: el animal le arrebata el látigo a su amo y se azota a sí mismo para convertirse en amo.</p><p>Esto no significa que toda iniciativa sea mala. Hay que distinguir. No es lo mismo tener una tarea que vivirse como un proyecto que siempre hay que mejorar. No es lo mismo una responsabilidad compartida que el mandato de «poder siempre más». Para Han, lo que enferma no es la iniciativa en sí. Es el rendimiento convertido en mandato, junto con vínculos cada vez más rotos y aislados.</p><p>Así, el sujeto de rendimiento se siente libre y, a la vez, indefenso. No tiene un enemigo claro afuera. Tiene una guerra hacia adentro.</p><h2>3. Enfermedades neuronales y cansancio a solas</h2><p>Para Han, cada época tiene sus enfermedades emblemáticas. En el siglo XXI destaca las que llama enfermedades neuronales: depresión, trastorno por déficit de atención con hiperactividad (TDAH), trastorno límite de la personalidad y síndrome de desgaste ocupacional (<em>burnout</em>). En su lectura, no son la reacción del cuerpo frente a un «otro» que ataca desde afuera. Son el resultado de un exceso de positividad. Demasiado aumento de rendimiento provoca lo que él llama infarto del alma.</p><p>La depresión está en el centro. Según Han, aparece cuando el sujeto de rendimiento ya no puede poder más. El lamento «nada es posible» solo tiene sentido en una sociedad que repite que «nada es imposible». No poder más lleva a reprocharse y a atacarse a uno mismo. Si el sujeto de rendimiento está en guerra consigo mismo, el depresivo es el herido de esa guerra.</p><p>El <em>burnout</em> aparece como el alma agotada, quemada, bajo la presión de rendir. Han no lo trata como un problema individual separado de la sociedad. Lo lee como síntoma de un mundo donde falta el límite, la interrupción, algo distinto de uno mismo que corte la hiperactividad.</p><p class="cortado">Ese cansancio no es cualquier fatiga. Han habla de cansancio a solas. Retoma a Peter Handke y su <em>Ensayo sobre el cansancio</em>: un cansancio que separa, donde cada uno cae por su lado, en su cansancio propio y no en uno compartido. Deja sin poder mirar y sin palabras. El Yo ocupa todo el lugar. Es un cansancio sin mundo, porque</p>
+      </div>
+      <div class="col der">
+<p class="sigue">ya no deja lugar para el otro.</p><div class="caja aviso"><span class="ctit">Una advertencia antes de seguir</span><p>Han escribe filosofía cultural, no un manual clínico. Esta lectura no sirve para diagnosticar a nadie, tampoco a uno mismo. Y no sirve para confundir tristeza, cansancio y depresión: no son lo mismo. Su aporte es otro. Muestra cómo, cuando todo parece posible, el cansancio se puede vivir como culpa personal.</p></div><h2>4. El cansancio curativo y los límites de la tesis</h2><p>El ensayo no termina solo en la denuncia. Termina en un cansancio curativo. Kafka, en un relato breve sobre Prometeo, imagina que los dioses se cansaron, se cansaron las águilas, y la herida se cerró de cansancio. Han ve ahí un cansancio que no abre heridas: las cierra. No viene de un Yo que se arma cada vez más, sino de un amable desarme del Yo.</p><p>Siguiendo a Handke, Han describe un cansancio que vuelve a abrir al sujeto: uno ve y es visto, toca y es tocado. Permite detenerse y demorarse. Cuando el Yo se achica, crece el mundo. Handke lo dice así: «El cansancio era mi amigo. Yo volvía a estar ahí, en el mundo.» Frente al cansancio que separa, aparece uno que devuelve el vínculo con lo que no es uno mismo.</p><p>La salida no es «rendir mejor para descansar después». Es recuperar formas de no hacer: contemplar, interrumpir, tener tiempos que no se justifican por lo que producen. Por ejemplo, un rato que no se usa para recargar energía y volver a rendir, sino que vale por sí mismo. Han critica también la creencia de que más actividad es más libertad.</p><p>Los límites de la tesis importan tanto como su fuerza. Han generaliza mucho sobre «Occidente» y el siglo XXI, y la investigación empírica no siempre lo acompaña punto por punto. Su idea no reemplaza el análisis de la explotación laboral, ni el de las desigualdades de clase, género o territorio. Mucha gente sigue bajo una presión de afuera muy dura: jefes, precariedad, vigilancia, castigo. Y no toda iniciativa es una enfermedad, ni toda tristeza prueba que Han tiene razón.</p><p>Leída con cuidado, la tesis sirve para nombrar algo de nuestro tiempo. La libertad que obliga a maximizar. El yo que se azota para volverse amo. El cansancio que aísla. Y, en el mejor de los casos, el cansancio que cierra la herida y devuelve mundo. Usada como lente, permite preguntar, sin sermones, dónde el «poder hacer» dejó de ser potencia y se volvió mandato. Usada como veredicto total, sería otro exceso: explicar demasiado con una sola fórmula.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pie"><span>La sociedad del rendimiento</span><span>H-27 · pág. 2 de 2</span></div>
+</section>
+</body>
+</html>
