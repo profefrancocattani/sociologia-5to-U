@@ -1,6 +1,6 @@
 # Serie H · Lecturas
 
-Dashboard de fichas H-07, H-08, H-09, H-10, H-21 y H-22 (Sociología 5º).
+Dashboard de fichas de la Serie H y lecturas de apoyo (Sociología 5º).
 
 - [Dashboard](https://profefrancocattani.github.io/sociologia-5to-U/)
 - [H-07 · La torre inverificable](https://profefrancocattani.github.io/sociologia-5to-U/h07-la-torre-inverificable.html)
@@ -9,6 +9,7 @@ Dashboard de fichas H-07, H-08, H-09, H-10, H-21 y H-22 (Sociología 5º).
 - [H-10 · El orden de mérito](https://profefrancocattani.github.io/sociologia-5to-U/h10-el-orden-de-merito.html)
 - [H-21 · No escucho eso](https://profefrancocattani.github.io/sociologia-5to-U/h21-no-escucho-eso.html)
 - [H-22 · De regular cuerpos a seducir psiques](https://profefrancocattani.github.io/sociologia-5to-U/h22-de-regular-cuerpos-a-seducir-psiques.html)
+- [La mala educación](https://profefrancocattani.github.io/sociologia-5to-U/la-mala-educacion.html)
 - [H-24 · ¿Y si borramos todo?](https://profefrancocattani.github.io/sociologia-5to-U/h24-y-si-borramos-todo.html)
 - [H-26 · Paisajes de líneas cruzadas](https://profefrancocattani.github.io/sociologia-5to-U/h26-paisajes-de-lineas-cruzadas.html)
 - [H-26 · Paisajes de líneas cruzadas (PDF)](https://profefrancocattani.github.io/sociologia-5to-U/h26-paisajes-de-lineas-cruzadas.pdf)
