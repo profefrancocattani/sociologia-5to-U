@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>H-26 · Paisajes de líneas cruzadas · análisis de clase</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #6f6f6f;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .hoja {
+    width: 297mm; height: 210mm;
+    background: #fff;
+    margin: 0 auto 6mm;
+    padding: 10mm 14mm 9mm 20mm;
+    position: relative;
+    overflow: hidden;
+  }
+  .hoja.verso { padding: 10mm 20mm 9mm 14mm; }
+  .cabezal {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    border-bottom: 0.7mm solid #000;
+    padding-bottom: 1.3mm; margin-bottom: 1.1mm;
+  }
+  .sigla {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 19pt; font-weight: 700; letter-spacing: 0.06em; line-height: 1;
+  }
+  .ubic {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 6.5pt; letter-spacing: 0.12em; text-transform: uppercase;
+    text-align: right; line-height: 1.45;
+  }
+  .subcabezal {
+    display: flex; justify-content: space-between; gap: 8mm;
+    border-bottom: 0.25mm solid #000;
+    padding-bottom: 2mm; margin-bottom: 2.4mm;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 7.2pt; letter-spacing: 0.06em;
+  }
+  .campo { flex: 1 1 auto; }
+  .campo span { border-bottom: 0.25mm dotted #000; display: inline-block; min-width: 55mm; }
+  .titulo {
+    font-size: 15.5pt; font-weight: normal; line-height: 1.08;
+    margin: 0 0 1mm; letter-spacing: -0.015em;
+  }
+  .bajada {
+    font-style: italic; font-size: 9pt; line-height: 1.32;
+    margin: 0 0 2.2mm; padding-bottom: 2mm;
+    border-bottom: 0.25mm solid #000;
+  }
+  .cols {
+    display: flex; align-items: stretch; gap: 0;
+  }
+  .col {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    display: flex; flex-direction: column;
+  }
+  .col.izq { padding-right: 5mm; border-right: 0.25mm solid #000; }
+  .col.der { padding-left: 5mm; }
+  h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 7.5pt; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 700; margin: var(--h2mt) 0 1.45mm;
+    padding-bottom: 1.05mm;
+    border-bottom: 0.25mm solid #000;
+  }
+  .col > h2:first-child { margin-top: 0; }
+  p {
+    font-size: var(--pt);
+    line-height: var(--lh);
+    margin: 0 0 var(--mb);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 7 3 3;
+  }
+  p.cortado { margin-bottom: 0; }
+  p.sigue { margin-top: 0; }
+  .pie {
+    position: absolute;
+    left: 20mm; right: 14mm; bottom: 5mm;
+    display: flex; justify-content: space-between;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 6.4pt; letter-spacing: 0.08em;
+    border-top: 0.25mm solid #000;
+    padding-top: 1.3mm;
+  }
+  .verso .pie { left: 14mm; right: 20mm; }
+  .cuerpo { padding-bottom: 7.5mm; }
+  em, i { font-style: italic; }
+  #probe {
+    position: absolute; left: -5000px; top: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  @media print {
+    html, body { background: #fff; }
+    .hoja { margin: 0; break-after: page; page-break-after: always; }
+    .hoja:last-child { break-after: auto; page-break-after: auto; }
+  }
+</style>
+</head>
+<body style="--pt:10.0pt;--lh:1.58;--mb:2.55mm;--h2mt:2.8mm;">
+
+<!-- ===================== PÁGINA 1 ===================== -->
+<section class="hoja p1">
+  <div class="cabezal">
+    <div class="sigla">H-26</div>
+    <div class="ubic">Sociología · 5.º U<br>Lectura · Análisis de clase</div>
+  </div>
+  <div class="subcabezal">
+    <div class="campo">Nombre <span>&nbsp;</span></div>
+    <div class="campo" style="flex:0 0 42mm; text-align:right;">Fecha <span style="min-width:28mm;">&nbsp;</span></div>
+  </div>
+  <h1 class="titulo">Paisajes de líneas cruzadas</h1>
+  <p class="bajada">No es un slogan de ricos y pobres. Es cómo se cruzan las líneas de clase.</p>
+  <div class="cuerpo">
+    <div class="cols" style="height:586px;">
+      <div class="col izq">
+        <p>La cámara sigue a Ki-woo mientras sube. Sale del departamento semienterrado de los Kim. La escalera dice lo que el diálogo todavía no dice: hay un ascenso. Después sube Ki-jung, por los escalones de la casa de los Park. Cuando el engaño funciona, entra Chung-sook vestida de empleada, con una bandeja de fruta. Otra subida.</p>
+        <p>
+        <em>Parasite</em> (2019) no es un slogan de «hay ricos y pobres». Bong la llamó su «película de escaleras». Schubert y Dhanushka, en «Landscapes of Crossed Lines» (<em>Polity</em>, 2020), la leen como líneas de clase: se trazan, se cruzan y, al final, se vuelven a cerrar. El film ganó el Oscar a Mejor Película. Fue la primera de lengua extranjera en lograrlo.</p>
+        <h2>Escalera: movilidad y su costo</h2>
+        <p>La escalera es el signo más claro de movilidad. Está metida en la estafa larga de los Kim contra los Park. El ascenso se filma como subida social: del semisótano al confort de una casa de arquitecto. Subir, en la imagen, es cambiar de clase.</p>
+        <p>Después la misma escalera muestra el costo. Moon-gwang, la empleada anterior, vuelve a buscar al marido escondido en el sótano. Chung-sook baja detrás de ella. En el sótano, Moon-gwang pide solidaridad. Que se traten de «hermanas». Que sean «compañeras de los necesitados». Primero la ignoran. Después la rechazan. La familia Kim escucha desde el pie de la escalera. Cuando insiste, otra vez «hermana», el accidente de Ki-woo los delata.</p>
+        <p>El poder se invierte. Moon-gwang ya no acepta que Chung-sook la llame «hermana». Sube con Geun-sae desde el sótano, con ese poder nuevo como una espada. Llegan los Park. Moon-gwang corre para avisar a su antigua patrona. Chung-sook la saca de una patada, escaleras abajo. Ki-taek arrastra el cuerpo hacia abajo.</p>
+        <p class="cortado">La pregunta de esta lectura es concreta. Pasar del desempleo o el subempleo al trabajo formal puede pagarse rompiendo la solidaridad con otros pobres. Con otros que también quieren subir, y están un poco más abajo. La movilidad no</p>
+      </div>
+      <div class="col der">
+        <p class="sigue">es solo subir. A veces es echar.</p>
+        <h2>Ventana: frontera y herencia</h2>
+        <p>La ventana marca el otro borde. La del semisótano da a la calle y es la única luz natural. También deja entrar el entorno: el gas del desinfectante, el pis de un borracho y, al final, la cloaca. Esa casa no se separa de la ciudad. La pobreza no queda adentro. Está abierta a lo que pasa afuera.</p>
+        <p>La ventana de los Park funciona al revés. Es la prueba de haber llegado. Cuando se van de campamento, Ki-taek mira la lluvia sobre el césped y dice que es bastante distinguido. Toman whisky. Ver el jardín desde adentro forma parte de la movilidad. No alcanza con estar en la casa. Hay que poder mirarla como propia.</p>
+        <p>Para las familias pobres, ese lugar dura lo que duran los dueños afuera. Moon-gwang y Geun-sae se distraen con el jardín y los Kim los vencen. Ki-woo se imagina el ascenso de pie en el jardín, con su madre, no en otro cuarto. El padre lo ve por primera vez a través de esa ventana. El reencuentro ocurre en el borde, entre la ventana y el césped.</p>
+        <p>Da-song no pelea esa vista. El jardín está pegado a él, el hijo. Su fiesta ahí es el escenario de la violencia final. Va a heredar el espacio sin lucha. Herencia: quien ya está arriba no necesita la estafa ni la escalera.</p>
+        <p>Escalera y ventana ordenan tres posiciones. Los que tienen poco. Los que tienen algo. Los que tienen mucho. Si uno se quedara solo con esos dos objetos, la desigualdad parecería un muro. La lectura muestra otra cosa. Las líneas se negocian todo el tiempo. No son fijas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pie"><span>Paisajes de líneas cruzadas</span><span>H-26 · análisis · pág. 1 de 2</span></div>
+</section>
+
+<!-- ===================== PÁGINA 2 ===================== -->
+<section class="hoja verso">
+  <div class="cabezal">
+    <div class="sigla">H-26</div>
+    <div class="ubic">Sociología · 5.º U<br>Lectura · Análisis de clase</div>
+  </div>
+  <div class="cuerpo" style="padding-top: 1.5mm;">
+    <div class="cols" style="height:669px;">
+      <div class="col izq">
+        <h2>Tres objetos de la relación parasitaria</h2>
+        <p>Bong lo dijo: sin el título, <em>Parasite</em> podría ser la familia rica o las pobres. Una frontera nítida no alcanza para pensar la clase en este film. Por eso importan tres objetos donde la relación se vuelve concreta. El auto. El sofá. La lamparita.</p>
+        <p>El auto parece riqueza. Dong-ik vigila la línea entre el asiento de adelante y el de atrás. En la práctica, el auto es intimidad de clase. Ki-taek maneja a Dong-ik y ayuda a Yeon-gyo con las compras. Se habla del amor de la pareja. Se cuchichea sobre Moon-gwang. El chofer aparece más como amigo que como empleado. Y está el olor de los Kim, que Dong-ik registra con más fuerza ahí. El tiempo en el auto es breve: vuelven de un campamento que salió mal. Igual, ahí se sostiene la estafa, porque se intensifica el vínculo entre las dos familias. Plata a la vista. Por dentro, un espacio compartido.</p>
+        <p>La lamparita parece prenderse sola. La luz crece y recién después entra Dong-ik. El trabajo físico se esconde y se presenta como automático, sin mano humana. Queda pegado al empresario tecnológico. Como su realidad virtual, le permite habitar una casa que no ve el trabajo de alrededor. No es automática. La opera Geun-sae desde el sótano. La luz está arriba. La mano está abajo. Eso es trabajo invisible.</p>
+        <p>Ese trabajo también habla. En el montaje, Ki-taek y Geun-sae conversan de lo oculto mientras Chung-sook y Yeon-gyo hablan del «trauma» de Da-song, que vio salir a Geun-sae del sótano. Yeon-gyo nota el Morse y lo atribuye a un sensor «chiflado». Para Geun-sae, la lámpara primero agradece a Dong-ik por sostenerlo. Después es un pedido de auxilio. Da-song lo lee y elige ignorarlo. Los Park no se enteran del mensaje que pasa por su casa. Más tarde Ki-taek, ya en el sótano, usa el mismo Morse para contarle su historia a Ki-woo, en el semisótano. La luz va para arriba. El mensaje cruza jerarquías: del sótano al semisótano. Los de arriba no lo leen, o lo leen y lo dejan pasar.</p>
+        <p>El sofá es el tercer espacio compartido. Cuando los Park se van, los Kim reclaman la casa. La siesta de Chung-sook y Ki-taek parece ocio. Al incorporarse ella, se ve la intimidad de la pareja. Moon-gwang y Geun-sae celebran en el mismo mueble: ella le masajea la espalda y el pie. Para las dos parejas pobres, el sofá es un rato de ascenso.</p>
+      </div>
+      <div class="col der">
+        <p>Para los Park es un rato de descenso. Dong-ik y Yeon-gyo, en una escena de sexo tenso, fantasean con ser una pareja de clase trabajadora, adicta, apurada, en el asiento de atrás de un auto. Juegan a bajar. Los Kim están a un brazo, escondidos bajo la mesa ratona. Las trayectorias no coinciden. Lo que las tres familias comparten es otra cosa: las tres se piensan como familia.</p>
+        <h2>El «tiro seguro»</h2>
+        <p>Bong describió el final como un «tiro seguro». Los últimos planos vuelven a la ventana del semisótano. Un momento antes, el plan de Ki-woo era ser dueño de esa casa algún día. El film lo corta. Ese sueño de movilidad es improbable. Bong lo dijo cruel y triste, y también real: ese chico no va a poder comprar la casa.</p>
+        <p>Ki-woo sobrevive de milagro. La piedra de estudioso le parte la cabeza dos veces y lo cargan a salvo. El sueño sigue vivo. La vuelta al sótano muestra cuánta ilusión hay en esa esperanza, cuando queda en manos de un personaje como él.</p>
+        <p>Ki-jung es, entre los pobres, quien más podía cruzar la línea. El hermano la ve darse un baño lujoso y dice que «encajaba ahí». La casa rica le queda bien. A ellos, no. Es la única pobre en el asiento de atrás del auto de los Park. Y es la primera a la que Geun-sae apuñala, justo delante de Da-song. La bronca contra los ricos no le cae al rico. Le cae a quien más amenazaba el orden de las clases.</p>
+        <p>Ki-taek apuñala a Dong-ik. La sangre de sus manos no es la del patrón: es la de su hija. Después baja al sótano para escapar de la ley. Repite el descenso de Geun-sae, que se había escondido ahí por las deudas. El ciclo se rearma: sótano, semisótano, casa de arquitecto. Ki-taek pelea la comida cuando la casa está vacía y vive con más holgura cuando la ocupa una familia rica. Pero ya no baja por deudas. Baja porque mató al patrón.</p>
+        <p>El tiro seguro quiere cerrar la discusión. La pregunta de la reseña queda en una frase: si debajo de ese cierre queda un resto que el final no apaga.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pie"><span>Paisajes de líneas cruzadas</span><span>H-26 · análisis · pág. 2 de 2</span></div>
+</section>
+
+</body>
+</html>
