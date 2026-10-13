@@ -1,6 +1,6 @@
 # Serie H · Lecturas
 
-Dashboard de diez fichas: H-07, H-08, H-09, H-10, H-21, H-22, La mala educación, H-24, H-26 y H-27 (Sociología 5º).
+Dashboard de once fichas: H-07, H-08, H-09, H-10, H-21, H-22, La mala educación, H-24, H-26, H-27 y Quién cuenta el 12 de octubre (Sociología 5º).
 
 - [Dashboard](https://profefrancocattani.github.io/sociologia-5to-U/)
 - [H-07 · La torre inverificable](https://profefrancocattani.github.io/sociologia-5to-U/h07-la-torre-inverificable.html)
@@ -15,3 +15,4 @@ Dashboard de diez fichas: H-07, H-08, H-09, H-10, H-21, H-22, La mala educación
 - [H-26 · Paisajes de líneas cruzadas (PDF)](https://profefrancocattani.github.io/sociologia-5to-U/h26-paisajes-de-lineas-cruzadas.pdf)
 - [H-27 · La sociedad del rendimiento](https://profefrancocattani.github.io/sociologia-5to-U/h27-la-sociedad-del-rendimiento.html)
 - [H-27 · La sociedad del rendimiento (PDF)](https://profefrancocattani.github.io/sociologia-5to-U/h27-la-sociedad-del-rendimiento.pdf)
+- [Quién cuenta el 12 de octubre](https://profefrancocattani.github.io/sociologia-5to-U/quien-cuenta-el-12-de-octubre.html)

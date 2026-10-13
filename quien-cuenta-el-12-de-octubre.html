@@ -1,0 +1,582 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Quién cuenta el 12 de octubre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Sistema Pergamino. Lectura en voz alta: columna de texto en serif, margen izquierdo con número de párrafo y glosas, pausas como cortes de página dentro de la hoja. */
+:root{
+  --papel:#E9E2D2;
+  --hoja:#FBF8F1;
+  --tinta:#1D1A15;
+  --tinta-2:#5A5245;
+  --linea:#CBBFA8;
+  --linea-fuerte:#857B69;
+  --teal:#1D6660;
+  --ambar:#9C6410;
+  --teal-suave:#E1ECE9;
+  --sombra:rgba(40,30,10,.18);
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --texto:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"Spline Sans Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --papel:#13120F; --hoja:#1E1C18; --tinta:#ECE4D3; --tinta-2:#B6AC98;
+    --linea:#3F3A31; --linea-fuerte:#8A806E; --teal:#7DBDB4; --ambar:#E2AA55;
+    --teal-suave:#1C2B29; --sombra:rgba(0,0,0,.5);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --papel:#13120F; --hoja:#1E1C18; --tinta:#ECE4D3; --tinta-2:#B6AC98;
+  --linea:#3F3A31; --linea-fuerte:#8A806E; --teal:#7DBDB4; --ambar:#E2AA55;
+  --teal-suave:#1C2B29; --sombra:rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--papel); color:var(--tinta);
+  font-family:var(--texto); font-size:15px; line-height:1.45;
+  padding-inline:16px; padding-block:0 48px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--teal); outline-offset:2px}
+p,h1,h2,h3,ol,ul,dl,dd,blockquote{margin:0}
+
+.barra{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--papel);
+  max-width:210mm; margin:0 auto; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 18px;
+  padding-block:12px 10px; border-bottom:1px solid var(--linea);
+}
+.barra b{font-family:var(--display); font-weight:600; font-size:17px}
+.barra nav{display:flex; flex-wrap:wrap; gap:4px 14px; font:500 11.5px/1.3 var(--mono); letter-spacing:.06em; text-transform:uppercase}
+.barra nav a{text-decoration:none; color:var(--tinta-2)}
+.barra nav a:hover{color:var(--teal)}
+.aviso-pantalla{max-width:210mm; margin:14px auto 18px; font-size:13px; color:var(--tinta-2)}
+
+.hoja{
+  width:210mm; max-width:100%; min-height:297mm; margin:0 auto 9mm; padding:12mm 15mm 9mm 13mm;
+  background:var(--hoja); box-shadow:0 1px 0 var(--linea), 0 14px 32px -20px var(--sombra);
+  display:flex; flex-direction:column; gap:5.4mm;
+}
+.cabeza,.pie{display:flex; justify-content:space-between; gap:4mm; flex-wrap:wrap; font:500 6.9pt/1.2 var(--mono); letter-spacing:.09em; text-transform:uppercase; color:var(--tinta-2)}
+.cabeza{border-bottom:.6pt solid var(--linea); padding-bottom:2mm}
+.pie{margin-top:auto; border-top:.6pt solid var(--linea); padding-top:2mm}
+.etiqueta{font:600 6.9pt/1.2 var(--mono); letter-spacing:.11em; text-transform:uppercase; color:var(--teal)}
+
+/* ---------- portada ---------- */
+.portada{display:grid; grid-template-columns:31mm 1fr; gap:0 5mm}
+.portada > div{grid-column:2; display:flex; flex-direction:column; gap:3.4mm}
+h1.titulo{font-family:var(--display); font-weight:620; font-variation-settings:"opsz" 144; font-size:40pt; line-height:.97; letter-spacing:-.008em; word-spacing:.05em; text-wrap:balance}
+.copete{font-family:var(--display); font-variation-settings:"opsz" 24; font-size:13.5pt; line-height:1.36; color:var(--tinta-2); max-width:40em; text-wrap:pretty}
+.como{display:grid; grid-template-columns:31mm 1fr; gap:0 5mm; border-top:1.1pt solid var(--tinta); border-bottom:.6pt solid var(--linea); padding-block:3.4mm}
+.como p{font-size:11pt; line-height:1.5}
+.como .muestra{display:flex; align-items:center; gap:2mm; font:500 7.4pt var(--mono); color:var(--tinta-2)}
+.estaciones{display:grid; grid-template-columns:repeat(6,1fr); border:.9pt solid var(--tinta)}
+.estaciones > div{padding:2.4mm 2.4mm 2.8mm; border-right:.6pt solid var(--linea-fuerte); display:flex; flex-direction:column; gap:1mm; min-width:0}
+.estaciones > div:last-child{border-right:0}
+.estaciones .n{font:600 6.8pt/1 var(--mono); color:var(--teal); letter-spacing:.08em}
+.estaciones b{font-family:var(--display); font-weight:600; font-size:15pt; line-height:1}
+.estaciones span:last-child{font-size:8.2pt; line-height:1.25}
+
+/* ---------- estación ---------- */
+.estacion{display:grid; grid-template-columns:31mm 1fr; gap:0 5mm; align-items:end; border-top:1.2pt solid var(--tinta); padding-top:3.4mm}
+.estacion .marca{display:flex; flex-direction:column; gap:1mm}
+.estacion .e-num{font:600 7pt/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--teal)}
+.estacion .e-anio{font-family:var(--display); font-weight:620; font-variation-settings:"opsz" 144; font-size:30pt; line-height:.9; font-variant-numeric:lining-nums}
+.estacion h2{font-family:var(--display); font-weight:560; font-variation-settings:"opsz" 72; font-size:20pt; line-height:1.08; text-wrap:balance; padding-bottom:.6mm}
+
+/* ---------- párrafos ---------- */
+.p{display:grid; grid-template-columns:31mm 1fr; gap:0 5mm}
+.margen{display:flex; flex-direction:column; gap:1.6mm; padding-top:.9mm}
+.pn{font:600 9pt/1 var(--mono); color:var(--teal); font-variant-numeric:tabular-nums}
+.glosa{display:flex; flex-direction:column; gap:1mm; font-size:8pt; line-height:1.3; color:var(--tinta-2)}
+.glosa dt{font:600 7.5pt/1.25 var(--mono); color:var(--tinta)}
+.glosa dd{margin:0 0 .6mm}
+.texto{display:flex; flex-direction:column; gap:3.6mm; min-width:0}
+.texto p{font-family:var(--display); font-variation-settings:"opsz" 14; font-size:13pt; line-height:1.6; text-wrap:pretty; hanging-punctuation:first}
+.texto q{quotes:"«" "»"}
+blockquote.doc{border-left:.8pt solid var(--tinta); padding:.4mm 0 .4mm 4mm; display:flex; flex-direction:column; gap:1.4mm}
+blockquote.doc p{font-family:var(--texto); font-size:11.8pt; line-height:1.52; font-weight:450}
+blockquote.doc cite{font:500 7pt/1.3 var(--mono); letter-spacing:.06em; text-transform:uppercase; font-style:normal; color:var(--tinta-2)}
+ul.preguntas-censo{padding-left:4.6mm; display:flex; flex-direction:column; gap:1.2mm; font-family:var(--texto); font-size:11.4pt; line-height:1.45}
+
+/* ---------- pausa ---------- */
+.pausa{display:grid; grid-template-columns:31mm 1fr; gap:0 5mm; align-items:center}
+.pausa > div{grid-column:2; display:flex; align-items:center; gap:3mm; border-top:.9pt dashed var(--linea-fuerte); border-bottom:.9pt dashed var(--linea-fuerte); padding-block:3.2mm}
+.pausa-ico{display:inline-flex; gap:1.1mm}
+.pausa-ico::before,.pausa-ico::after{content:""; width:1.3mm; height:4.2mm; background:var(--tinta); display:block}
+.pausa span.t{font:600 8.4pt/1 var(--mono); letter-spacing:.14em; text-transform:uppercase}
+
+/* ---------- hoja docente ---------- */
+.notas-intro{display:grid; grid-template-columns:1fr 1fr; gap:5mm}
+.notas-intro > div{display:flex; flex-direction:column; gap:1.8mm; min-width:0}
+.notas-intro p{font-size:9.2pt; line-height:1.45}
+h2.seccion{font-family:var(--display); font-weight:600; font-variation-settings:"opsz" 72; font-size:19pt; line-height:1.08}
+h3{font:700 9.2pt/1.25 var(--texto)}
+.nota-pausa{display:grid; grid-template-columns:24mm 1fr; gap:4mm; border-top:.9pt solid var(--tinta); padding-top:2.6mm}
+.nota-pausa .cab{display:flex; flex-direction:column; gap:1mm}
+.nota-pausa .cab b{font-family:var(--display); font-weight:600; font-size:15pt; line-height:1}
+.nota-pausa .cab span{font:500 6.8pt/1.25 var(--mono); letter-spacing:.07em; text-transform:uppercase; color:var(--tinta-2)}
+.nota-pausa .cuerpo{display:grid; grid-template-columns:.85fr 1.15fr; gap:4mm; min-width:0}
+.nota-pausa .cuerpo > div{display:flex; flex-direction:column; gap:1.2mm; min-width:0}
+.nota-pausa ul{padding-left:3.6mm; display:flex; flex-direction:column; gap:1mm; font-size:9pt; line-height:1.4}
+.nota-pausa p{font-size:9pt; line-height:1.45}
+.nota-pausa .conecta{font:500 7pt/1.3 var(--mono); letter-spacing:.05em; color:var(--teal); text-transform:uppercase}
+.fuentes-lista{columns:2; column-gap:7mm; font-size:7.7pt; line-height:1.36; padding-left:4.5mm}
+.fuentes-lista li{break-inside:avoid; margin-bottom:1.5mm}
+.fuentes-lista a{word-break:break-word}
+.chico{font-size:8.3pt; line-height:1.4; color:var(--tinta-2)}
+
+/* ---------- pantalla angosta ---------- */
+@media screen and (max-width:820px){
+  .hoja{width:100%; min-height:0; padding:22px 18px 16px}
+  h1.titulo{font-size:32pt}
+  .portada,.como,.estacion,.p,.pausa{grid-template-columns:1fr}
+  .portada > div,.pausa > div{grid-column:1}
+  .como .muestra{margin-bottom:2mm}
+  .estaciones{grid-template-columns:repeat(3,1fr)}
+  .estaciones > div:nth-child(3){border-right:0}
+  .estaciones > div:nth-child(-n+3){border-bottom:.6pt solid var(--linea-fuerte)}
+  .margen{flex-direction:row; flex-wrap:wrap; align-items:baseline; gap:1.5mm 4mm; padding-top:0; margin-bottom:1.5mm}
+  .glosa{flex-direction:row; flex-wrap:wrap; gap:.5mm 3mm}
+  .glosa dd{margin-right:2mm}
+  .texto p{font-size:12pt}
+  .notas-intro,.nota-pausa,.nota-pausa .cuerpo{grid-template-columns:1fr}
+  .fuentes-lista{columns:1}
+}
+
+/* ---------- impresión en blanco y negro ---------- */
+@page{size:A4; margin:0}
+@media print{
+  :root:not(#z){
+    --papel:#fff; --hoja:#fff; --tinta:#000; --tinta-2:#2e2e2e; --linea:#9b9b9b; --linea-fuerte:#4d4d4d;
+    --teal:#000; --ambar:#000; --teal-suave:#fff; --sombra:transparent; color-scheme:light;
+  }
+  body{padding:0; background:#fff}
+  .barra,.aviso-pantalla{display:none}
+  .hoja{width:210mm; height:297mm; min-height:0; margin:0; box-shadow:none; overflow:hidden; break-after:page; page-break-after:always}
+  .hoja:last-of-type{break-after:auto; page-break-after:auto}
+  a{color:#000; text-decoration:none}
+}
+</style>
+
+<header class="barra">
+  <b>Quién cuenta el 12 de octubre</b>
+  <nav aria-label="Secciones">
+    <a href="#lectura">Lectura</a>
+    <a href="#e1">1492</a>
+    <a href="#e2">1853</a>
+    <a href="#e3">1917</a>
+    <a href="#e4">1994</a>
+    <a href="#e5">2022</a>
+    <a href="#e6">2010</a>
+    <a href="#docente">Notas docentes</a>
+  </nav>
+</header>
+<p class="aviso-pantalla">Ocho hojas A4 de lectura para fotocopiar y dos de notas docentes, que no se fotocopian. Se imprime en blanco y negro.</p>
+
+<!-- ================= LECTURA 1 ================= -->
+<section class="hoja" id="lectura">
+  <div class="cabeza"><span>Material de lectura</span><span>Para leer en voz alta</span></div>
+
+  <div class="portada">
+    <div>
+      <p class="etiqueta">Acompaña la clase «El nombre del lunes»</p>
+      <h1 class="titulo">Quién cuenta el 12 de octubre</h1>
+      <p class="copete">Seis momentos, entre 1492 y 2026, en los que alguien escribió sobre esta fecha o sobre los pueblos que ya vivían en América.</p>
+    </div>
+  </div>
+
+  <div class="como">
+    <div class="muestra"><span class="pausa-ico" aria-hidden="true"></span><span>pausa</span></div>
+    <p>Se lee en voz alta y por turnos. Cada párrafo lleva un número al costado, y las palabras difíciles están explicadas en el margen. Cuando aparece una pausa, la lectura se detiene un momento.</p>
+  </div>
+
+  <div class="estaciones" aria-label="Las seis estaciones de la lectura">
+    <div><span class="n">1</span><b>1492</b><span>Una isla con dos nombres</span></div>
+    <div><span class="n">2</span><b>1853</b><span>Una línea en la Constitución</span></div>
+    <div><span class="n">3</span><b>1917</b><span>Una fiesta para España</span></div>
+    <div><span class="n">4</span><b>1994</b><span>Santa Fe, de noche</span></div>
+    <div><span class="n">5</span><b>2022</b><span>Contar personas</span></div>
+    <div><span class="n">6</span><b>2010</b><span>Un día con dos nombres, hasta 2026</span></div>
+  </div>
+
+  <div class="estacion" id="e1">
+    <div class="marca"><span class="e-num">Estación 1</span><span class="e-anio">1492</span></div>
+    <h2>Una isla con dos nombres</h2>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">1</span><dl class="glosa"><dt>genovés</dt><dd>de Génova, ciudad de la actual Italia</dd></dl></div>
+    <div class="texto"><p>El 12 de octubre de 1492, tres barcos al servicio de la Corona de Castilla llegaron a una isla pequeña del mar Caribe, en el archipiélago que hoy se conoce como Bahamas. Los comandaba Cristóbal Colón, un navegante genovés que buscaba llegar a Asia navegando hacia el oeste.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">2</span><dl class="glosa"><dt>hallé</dt><dd>encontré</dd></dl></div>
+    <div class="texto"><p>La isla ya tenía nombre. Sus pobladores, los lucayos, la llamaban Guanahaní. En una carta escrita durante el viaje de regreso, Colón contó que le había puesto otro: <q>A la primera que yo hallé puse nombre San Salvador</q>, escribió, y aclaró enseguida que <q>los Indios la llaman Guanahaní</q>. Desde ese día, el mismo lugar tuvo dos nombres: el de quienes vivían ahí y el de quien acababa de llegar.</p></div>
+  </div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 1 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 2 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 1 · 1492</span><span>Una isla con dos nombres</span></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">3</span><dl class="glosa"><dt>ingenio</dt><dd>inteligencia</dd><dt>presto</dt><dd>rápido</dd><dt>ligeramente</dt><dd>con facilidad</dd><dt>secta</dt><dd>religión</dd><dt>placiendo a Nuestro Señor</dt><dd>si Dios quiere</dd><dt>Vuestra Alteza</dt><dd>forma de dirigirse a los reyes</dd></dl></div>
+    <div class="texto">
+      <p>Colón llevaba además un diario de viaje dirigido a los reyes Isabel y Fernando. Allí describió a las personas que encontró en la isla: gente joven, que según él <q>todo tomaban y daban de aquello que tenían de buena voluntad</q>, y que no conocía las espadas de hierro, porque cuando se las mostró las tomaron por el filo. También escribió lo que esperaba de ellas:</p>
+      <blockquote class="doc">
+        <p>«Ellos deben ser buenos servidores y de buen ingenio, que veo que muy presto dicen todo lo que les decía. Y creo que ligeramente se harían cristianos, que me pareció que ninguna secta tenían. Yo, placiendo a Nuestro Señor, llevaré de aquí al tiempo de mi partida seis a Vuestra Alteza para que aprendan a hablar.»</p>
+        <cite>Diario de Colón · entrada del jueves 11 de octubre de 1492 · ortografía modernizada</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">4</span><dl class="glosa"><dt>fray</dt><dd>título de los frailes</dd><dt>dominico</dt><dd>de la orden religiosa de Santo Domingo</dd></dl></div>
+    <div class="texto"><p>Ese diario tiene su propia historia. El original se perdió. El texto que se conoce es una copia resumida que hizo fray Bartolomé de las Casas, un fraile dominico que con los años denunció los abusos de la conquista. En algunos tramos, Las Casas copia las palabras de Colón; en otros, las resume con las suyas. Lo que hoy se lee como «el diario de Colón» pasó por dos manos.</p></div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 1</span></div></div>
+
+  <div class="estacion" id="e2">
+    <div class="marca"><span class="e-num">Estación 2</span><span class="e-anio">1853</span></div>
+    <h2>Una línea en la Constitución</h2>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">5</span><dl class="glosa"><dt>sancionar</dt><dd>aprobar una ley o una constitución</dd></dl></div>
+    <div class="texto"><p>Tres siglos y medio después, el 1 de mayo de 1853, un congreso reunido en la ciudad de Santa Fe sancionó la Constitución de la Nación Argentina. La provincia de Buenos Aires, separada entonces del resto, se sumó en 1860, con una reforma. El texto organizaba el nuevo Estado y repartía las tareas entre sus poderes.</p></div>
+  </div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 2 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 3 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 2 · 1853</span><span>Una línea en la Constitución</span></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">6</span><dl class="glosa"><dt>proveer a</dt><dd>ocuparse de</dd><dt>conversión</dt><dd>cambio de religión</dd></dl></div>
+    <div class="texto">
+      <p>Entre las tareas del Congreso, el artículo 64 incluía esta, en su inciso 15:</p>
+      <blockquote class="doc">
+        <p>«Proveer a la seguridad de las fronteras, conservar el trato pacífico con los indios y promover la conversión de ellos al catolicismo.»</p>
+        <cite>Constitución de la Nación Argentina, 1853 · artículo 64, inciso 15</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">7</span></div>
+    <div class="texto"><p>La última parte, la que habla de la conversión al catolicismo, no figuraba en el proyecto que se discutió. Se agregó durante el debate, en la sesión del 27 de abril de 1853.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">8</span><dl class="glosa"><dt>parlamento</dt><dd>acá, reunión para negociar un acuerdo</dd></dl></div>
+    <div class="texto"><p>En esa época, algunas palabras tenían otro sentido. «Fronteras» nombraba la línea entre el territorio que controlaba el gobierno y el que controlaban los pueblos indígenas. El verbo «conservar» también tenía una razón: desde la época colonial existían tratados y «parlamentos», reuniones en las que autoridades y comunidades indígenas negociaban acuerdos.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">9</span><dl class="glosa"><dt>inciso</dt><dd>cada parte numerada de un artículo</dd><dt>regir</dt><dd>estar vigente</dd></dl></div>
+    <div class="texto"><p>Con la reforma de 1860, el artículo cambió de número y pasó a ser el 67, inciso 15. Con ese texto rigió durante 141 años.</p></div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 2</span></div></div>
+
+  <div class="estacion" id="e3">
+    <div class="marca"><span class="e-num">Estación 3</span><span class="e-anio">1917</span></div>
+    <h2>Una fiesta para España</h2>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">10</span><dl class="glosa"><dt>neutral</dt><dd>que no toma partido en una guerra</dd></dl></div>
+    <div class="texto"><p>En 1917 gobernaba Hipólito Yrigoyen, el primer presidente elegido con la ley Sáenz Peña de 1912, que estableció el voto secreto y obligatorio para los varones. En Europa se peleaba la Primera Guerra Mundial. Yrigoyen mantuvo al país neutral y promovió una identidad común entre España y los países de lengua española, como alternativa a la influencia de Estados Unidos en el continente.</p></div>
+  </div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 3 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 4 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 3 · 1917</span><span>Una fiesta para España</span></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">11</span><dl class="glosa"><dt>considerandos</dt><dd>razones que se escriben antes de lo que se decide</dd><dt>trascendencia</dt><dd>importancia</dd><dt>enigmático</dt><dd>misterioso</dd><dt>denuedo</dt><dd>valentía</dd><dt>preceptismo</dt><dd>reglas y enseñanzas</dd><dt>menestrales</dt><dd>artesanos</dd><dt>heredad</dt><dd>tierra que se hereda</dd><dt>progenitora</dt><dd>madre</dd><dt>[…]</dt><dd>parte que no se copió</dd></dl></div>
+    <div class="texto">
+      <p>El 4 de octubre de ese año firmó un decreto que declaraba «fiesta nacional» el 12 de octubre. Los considerandos explicaban las razones:</p>
+      <blockquote class="doc">
+        <p>«Que el descubrimiento de América es el acontecimiento de más trascendencia que haya realizado la Humanidad […].</p>
+        <p>Que la España descubridora y conquistadora volcó sobre el continente enigmático el […] valor de sus guerreros, el denuedo de sus exploradores, la fe de sus sacerdotes, el preceptismo de sus sabios, las labores de sus menestrales, y […] obró el milagro de conquistar para la civilización la inmensa heredad […].</p>
+        <p>Que […] la festividad de esta fecha en homenaje a España, progenitora de naciones a las cuales ha dado con la levadura de su sangre y con la armonía de su lengua una herencia inmortal […].</p>
+        <p>Artículo 1.º Declárase fiesta nacional el día 12 de Octubre.»</p>
+        <cite>Decreto del presidente Hipólito Yrigoyen · 4 de octubre de 1917 · fragmentos</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">12</span></div>
+    <div class="texto"><p>Los considerandos no nombran a los pueblos que vivían en el continente. La tierra americana aparece como «continente enigmático» y como «inmensa heredad». El texto tampoco usa las palabras «Día de la Raza».</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">13</span><dl class="glosa"><dt>Unión Ibero-Americana</dt><dd>asociación española que buscaba unir a España con América</dd></dl></div>
+    <div class="texto"><p>Ese nombre venía de España. Lo había propuesto en 1913 Faustino Rodríguez-San Pedro, presidente de la Unión Ibero-Americana, para una celebración que uniera a España con los países americanos. En la Argentina, el 12 de octubre se conoció como «Día de la Raza» durante casi todo el siglo XX.</p></div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 3</span></div></div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 4 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 5 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 4 · 1994</span><span>Santa Fe, de noche</span></div>
+
+  <div class="estacion" id="e4">
+    <div class="marca"><span class="e-num">Estación 4</span><span class="e-anio">1994</span></div>
+    <h2>Santa Fe, de noche</h2>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">14</span><dl class="glosa"><dt>Convención Constituyente</dt><dd>asamblea elegida para reformar la Constitución</dd></dl></div>
+    <div class="texto"><p>En 1994 se reformó la Constitución. La Convención Constituyente se reunió en Santa Fe, la misma ciudad donde se había sancionado el texto de 1853.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">15</span><dl class="glosa"><dt>Paraninfo</dt><dd>salón de actos de una universidad</dd><dt>unanimidad</dt><dd>con el voto de todos</dd></dl></div>
+    <div class="texto"><p>El 11 de agosto de 1994 llegaron a la ciudad más de 300 representantes de pueblos indígenas de todo el país. Iban a presenciar el tratamiento del artículo sobre sus derechos. La asamblea empezó a discutirlo cuando ya era de noche, en el Paraninfo de la Universidad Nacional del Litoral, y lo aprobó por unanimidad.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">16</span><dl class="glosa"><dt>preexistencia</dt><dd>haber estado antes; acá, antes que el Estado</dd><dt>intercultural</dt><dd>entre culturas</dd><dt>personería jurídica</dt><dd>reconocimiento legal de la comunidad, que puede firmar, reclamar y tener bienes</dd><dt>enajenable</dt><dd>que se puede vender o ceder</dd><dt>gravámenes o embargos</dt><dd>cargas o deudas que permiten quitar un bien</dd></dl></div>
+    <div class="texto">
+      <p>El nuevo artículo, el 75, inciso 17, reemplazó al de 1853. Entre las tareas del Congreso, ahora dice:</p>
+      <blockquote class="doc">
+        <p>«Reconocer la preexistencia étnica y cultural de los pueblos indígenas argentinos.</p>
+        <p>Garantizar el respeto a su identidad y el derecho a una educación bilingüe e intercultural; reconocer la personería jurídica de sus comunidades, y la posesión y propiedad comunitarias de las tierras que tradicionalmente ocupan; y regular la entrega de otras aptas y suficientes para el desarrollo humano; ninguna de ellas será enajenable, transmisible ni susceptible de gravámenes o embargos.</p>
+        <p>Asegurar su participación en la gestión referida a sus recursos naturales y a los demás intereses que los afecten.»</p>
+        <cite>Constitución Nacional, 1994 · artículo 75, inciso 17</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 4</span></div></div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 5 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 6 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 5 · 2022</span><span>Contar personas</span></div>
+
+  <div class="estacion" id="e5">
+    <div class="marca"><span class="e-num">Estación 5</span><span class="e-anio">2022</span></div>
+    <h2>Contar personas</h2>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">17</span><dl class="glosa"><dt>INDEC</dt><dd>Instituto Nacional de Estadística y Censos</dd></dl></div>
+    <div class="texto">
+      <p>Un censo cuenta a toda la población de un país en un mismo momento. En la Argentina lo organiza el INDEC, que empezó a preguntar por los pueblos indígenas en el censo de 2001. En el censo del 18 de mayo de 2022, la pregunta se hizo a todas las personas. Fueron tres:</p>
+      <ul class="preguntas-censo">
+        <li>«¿Se reconoce indígena o descendiente de pueblos indígenas u originarios?»</li>
+        <li>«¿De qué pueblo indígena u originario?»</li>
+        <li>«¿Habla y/o entiende la lengua de ese pueblo indígena u originario?»</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">18</span><dl class="glosa"><dt>autorreconocimiento</dt><dd>lo que una persona dice de sí misma</dd></dl></div>
+    <div class="texto"><p>El número sale de lo que cada persona responde sobre sí misma. Esa forma de contar se llama autorreconocimiento: nadie presenta documentos ni se hace análisis de ningún tipo.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">19</span><dl class="glosa"><dt>INAI</dt><dd>Instituto Nacional de Asuntos Indígenas</dd></dl></div>
+    <div class="texto"><p>En 2022, 1.306.730 personas se reconocieron indígenas o descendientes: el 2,9 % de la población que vive en viviendas particulares. En 2010 habían sido 955.032, el 2,4 %, de 31 pueblos registrados. En 2022 aparecieron 58 pueblos y 53 lenguas, y muchas personas se identificaron con el nombre que su pueblo usa en su propia lengua. El INAI reconoce unos 40 pueblos. Un análisis del diario <i>La Voz</i> atribuye el aumento a cambios culturales: más gente que se reconoce.</p></div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 5</span></div></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">20</span></div>
+    <div class="texto"><p>Los pueblos con más personas son el mapuche (145.783), el guaraní (135.232), el diaguita (86.022), el qom (80.124), el kolla (69.121) y el wichí (69.080). La mayoría de quienes se reconocen mapuche vive en Neuquén, Río Negro, Buenos Aires y Chubut. Del pueblo guaraní, el 36,9 % vive en la provincia de Buenos Aires.</p></div>
+  </div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 6 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 7 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 5 · 2022</span><span>Contar personas</span></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">21</span></div>
+    <div class="texto"><p>Si se cuenta por cantidad de personas, la provincia de Buenos Aires es la que tiene más población que se reconoce indígena. Dentro de la provincia, el pueblo con más personas es el guaraní, con 49.845; le siguen el mapuche y el qom. Si se cuenta por proporción, Jujuy y Salta están primeras: allí se reconoce indígena una de cada diez personas.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">22</span><dl class="glosa"><dt>pilagá</dt><dd>pueblo y lengua del Chaco, sobre todo en Formosa</dd><dt>mbya guaraní</dt><dd>pueblo y lengua guaraní, sobre todo en Misiones</dd></dl></div>
+    <div class="texto"><p>Sobre las lenguas, el 29,3 % dijo hablar o entender la de su pueblo. Las proporciones más altas aparecen entre los pilagá, con el 89 %, y entre los mbya guaraní, con el 83,6 %.</p></div>
+  </div>
+
+  <div class="estacion" id="e6">
+    <div class="marca"><span class="e-num">Estación 6</span><span class="e-anio">2010</span><span class="e-num">hasta 2026</span></div>
+    <h2>Un día con dos nombres</h2>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">23</span><dl class="glosa"><dt>decreto de necesidad y urgencia</dt><dd>decreto del Poder Ejecutivo sobre un tema de ley, que después revisa el Congreso</dd><dt>denominación</dt><dd>nombre</dd><dt>dotar</dt><dd>dar</dd><dt>acorde</dt><dd>que coincide con</dd></dl></div>
+    <div class="texto">
+      <p>El 2 de noviembre de 2010, la presidenta Cristina Fernández de Kirchner firmó el decreto 1584. Era un decreto de necesidad y urgencia que reordenaba los feriados: creaba el del 20 de noviembre, Día de la Soberanía Nacional, devolvía el carnaval al calendario y fijaba días con fines turísticos. Uno de sus considerandos cambiaba el nombre del 12 de octubre:</p>
+      <blockquote class="doc">
+        <p>«Que, asimismo, se modifica la denominación del feriado del día 12 de octubre, dotando a dicha fecha, de un significado acorde al valor que asigna nuestra Constitución Nacional y diversos tratados y declaraciones de derechos humanos a la diversidad étnica y cultural de todos los pueblos.»</p>
+        <p>«12 de octubre: Día del Respeto a la Diversidad Cultural.»</p>
+        <cite>Decreto 1584/2010 · considerando y artículo 1</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 7 / 8</span></div>
+</section>
+
+<!-- ================= LECTURA 8 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Estación 6 · 2010–2026</span><span>Un día con dos nombres</span></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">24</span><dl class="glosa"><dt>Jefatura de Gabinete</dt><dd>ministerio que coordina a los demás</dd></dl></div>
+    <div class="texto"><p>En 2012, la Cámara de Diputados declaró válido el decreto. En 2017, el Congreso sancionó la Ley 27.399, que fija los feriados del país, y su artículo 1 llama al 12 de octubre «Día del Respeto a la Diversidad Cultural». Desde entonces, el nombre está escrito en una ley. En 2025, la Jefatura de Gabinete trasladó el feriado al viernes 10 con una resolución que usó ese nombre y citó esa ley.</p></div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 6</span></div></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">25</span></div>
+    <div class="texto"><p>El 12 de octubre de 2024, la cuenta oficial de la Casa Rosada publicó un video por el «Día de la Raza». El mensaje presentó la llegada de Colón como el comienzo de la civilización en el continente y habló de <q>los lazos culturales y humanos que han perdurado entre España y América</q>. En 2025, la misma cuenta difundió otro video con el mismo enfoque.</p></div>
+  </div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">26</span><dl class="glosa"><dt>trasladable</dt><dd>que se puede mover a otro día</dd><dt>eurocentrista</dt><dd>que mira el mundo desde Europa</dd></dl></div>
+    <div class="texto"><p>En 2026, el calendario de feriados que publica el Gobierno nacional nombra al 12 de octubre «Día de la Raza». La Ley 27.399 no se modificó, y el feriado conserva su condición de nacional y trasladable. En la Cámara de Diputados se presentó un proyecto de resolución que repudia esa decisión: afirma que la expresión responde a una concepción eurocentrista y colonial, y pide usar el nombre de la ley.</p></div>
+  </div>
+
+  <div class="pausa"><div><span class="pausa-ico" aria-hidden="true"></span><span class="t">Pausa 7</span></div></div>
+
+  <div class="p">
+    <div class="margen"><span class="pn">27</span></div>
+    <div class="texto"><p>En otros países, la misma fecha tiene otros nombres. En España es la Fiesta Nacional desde 1987. En México se llama Día de la Nación Pluricultural; en Perú, Día de los Pueblos Originarios y el Diálogo Intercultural; en Venezuela, Día de la Resistencia Indígena; en Bolivia, Día de la Descolonización.</p></div>
+  </div>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 8 / 8</span></div>
+</section>
+
+<!-- ================= NOTAS DOCENTES 1 ================= -->
+<section class="hoja" id="docente">
+  <div class="cabeza"><span>Notas docentes · no se fotocopian</span><span>Quién cuenta el 12 de octubre</span></div>
+
+  <div class="notas-intro">
+    <div>
+      <h2 class="seccion">Cómo se usa</h2>
+      <p>Unas 2.000 palabras: cerca de 15 minutos de lectura en voz alta, y alrededor de 30 con las siete pausas. Funciona en un módulo aparte, antes o después de «El nombre del lunes». Si va antes, las fuentes del momento 3 ya llegan conocidas y el grupo puede ir directo a las preguntas.</p>
+      <p>Un párrafo por lector. Los párrafos 3, 11, 16 y 23 tienen citas largas en lenguaje de época: conviene que los lea el docente o alguien que se ofrezca.</p>
+    </div>
+    <div>
+      <h2 class="seccion">Qué tiene y qué no</h2>
+      <p>El texto narra y cita; no tiene preguntas ni conclusiones. Las pausas son lugares para aclarar dudas, y la hoja de los estudiantes solo muestra el número. Abajo, para cada pausa, van las dudas que pueden aparecer y una aclaración breve.</p>
+      <p>Las estaciones 5 y 6 tienen datos que cambian. Están verificados al 13 de octubre de 2026.</p>
+    </div>
+  </div>
+
+  <div class="nota-pausa">
+    <div class="cab"><b>Pausa 1</b><span>Después del ¶4 · 1492</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>Si lo escribió Colón, ¿por qué «dos manos»?</li><li>¿Qué quiere decir «para que aprendan a hablar»?</li><li>¿Lucayos, taínos, indios?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>Las personas de Guanahaní tenían su lengua. En la frase de Colón, «hablar» significa hablar la lengua de Castilla. El diario llega a través de la copia de Las Casas, así que antes de leer qué dice un texto conviene saber quién lo escribió, para quién y quién lo copió.</p><p class="conecta">Clase · fuente 1 del momento 3</p></div>
+    </div>
+  </div>
+
+  <div class="nota-pausa">
+    <div class="cab"><b>Pausa 2</b><span>Después del ¶9 · 1853</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>¿Por qué «indios»?</li><li>¿Frontera con quién?</li><li>¿Seguía vigente en el siglo XX?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>«Indios» viene de la idea de Colón de haber llegado a las Indias, es decir, a Asia. Es la palabra del documento; en clase usamos «pueblos originarios» o «indígenas». Las «fronteras» eran líneas dentro del territorio que hoy es la Argentina, y las campañas militares de fines del siglo XIX ocuparon esas tierras. El texto rigió, con el número 67, hasta 1994.</p><p class="conecta">Clase · fuente 2 del momento 3</p></div>
+    </div>
+  </div>
+
+  <div class="nota-pausa">
+    <div class="cab"><b>Pausa 3</b><span>Después del ¶13 · 1917</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>¿Por qué un presidente argentino homenajea a España?</li><li>¿Qué quiere decir «raza» en este nombre?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>El contexto es la neutralidad en la Primera Guerra y la búsqueda de una identidad hispana frente al panamericanismo de Estados Unidos. En el hispanismo de la época, «raza» se usaba para un conjunto de pueblos unidos por lengua e historia; la biología actual no divide a la humanidad en razas. Quienes defienden el nombre lo leen en ese sentido cultural; quienes lo critican señalan que la palabra arrastra jerarquías entre grupos humanos.</p><p class="conecta">Clase · fuente 3 y momento 4</p></div>
+    </div>
+  </div>
+
+<div class="nota-pausa">
+    <div class="cab"><b>Pausa 4</b><span>Después del ¶16 · 1994</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>¿Para qué sirve la personería jurídica?</li><li>¿Por qué las tierras no se pueden vender?</li><li>¿Se cumple?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>Sin personería, una comunidad no puede, por ejemplo, firmar un convenio o reclamar ante la justicia como comunidad. Que la tierra comunitaria no se pueda vender ni embargar busca que no se pierda por deudas o por ventas individuales. Sobre el cumplimiento, el artículo solo dice qué debe hacer el Congreso: saberlo requiere otras fuentes, y señalarlo es un límite que vale el nivel 4 de la rúbrica.</p><p class="conecta">Clase · fuente 4 del momento 3</p></div>
+    </div>
+  </div>
+
+    <div class="pie"><span>Quién cuenta el 12 de octubre · Notas docentes</span><span>1 / 2</span></div>
+</section>
+
+<!-- ================= NOTAS DOCENTES 2 ================= -->
+<section class="hoja">
+  <div class="cabeza"><span>Notas docentes · no se fotocopian</span><span>Pausas 5 a 7 y fuentes</span></div>
+
+  <div class="nota-pausa">
+    <div class="cab"><b>Pausa 5</b><span>Después del ¶19 · 2022</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>¿Cómo sabe el censo quién es indígena?</li><li>¿Uno puede decir cualquier cosa?</li><li>¿Por qué aumentó tanto?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>El autorreconocimiento coincide con el Convenio 169 de la OIT, ratificado por la Argentina en 2000, que toma la conciencia de la propia identidad como criterio fundamental. Para el aumento hay más de una lectura: más personas que se reconocen y un cambio en la forma de preguntar, porque en 2022 la pregunta llegó a toda la población y antes se hacía a una parte.</p><p class="conecta">Clase · momento 2</p></div>
+    </div>
+  </div>
+
+  <div class="nota-pausa">
+    <div class="cab"><b>Pausa 6</b><span>Después del ¶24 · 2010–2017</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>¿Qué diferencia hay entre un decreto y una ley?</li><li>¿Qué es un decreto de necesidad y urgencia?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>La ley la sanciona el Congreso; el decreto lo firma el Poder Ejecutivo. El de necesidad y urgencia (art. 99, inc. 3) permite al Ejecutivo resolver un tema de ley cuando considera que no puede esperar el trámite del Congreso, que después lo revisa. Desde 2017 el nombre está en una ley: para cambiarlo hace falta una norma de ese mismo rango.</p><p class="conecta">Clase · momento 4</p></div>
+    </div>
+  </div>
+
+  <div class="nota-pausa">
+    <div class="cab"><b>Pausa 7</b><span>Después del ¶26 · 2024–2026</span></div>
+    <div class="cuerpo">
+      <div><h3>Dudas posibles</h3><ul><li>¿Entonces cómo se llama?</li><li>¿Quién tiene razón?</li></ul></div>
+      <div><h3>Para aclarar</h3><p>De hecho: la ley vigente dice «Día del Respeto a la Diversidad Cultural»; el calendario oficial 2026 dice «Día de la Raza»; el feriado es el mismo. Sobre quién tiene razón, el texto da los argumentos de cada parte con sus palabras: el decreto de 2010, la Casa Rosada en 2024 y el proyecto en Diputados. Vale el criterio del plan anual: se enseña el mecanismo y no la conclusión política. La pregunta que ordena es quién nombra, desde qué institución y con qué argumento.</p><p class="conecta">Clase · momento 4 y Bourdieu, capítulo 3</p></div>
+    </div>
+  </div>
+
+  <div class="flujo">
+    <h3>Fuentes</h3>
+  </div>
+  <ol class="fuentes-lista">
+    <li>C. Colón, <i>Diario del primer viaje</i> (11/10/1492) y carta del regreso (1493), <a href="https://www.uv.es/~fores/TxTCristobalColon.html">texto modernizado</a>, Universitat de València; <a href="https://mdc.ulpgc.es/files/original/6b1ece8364b7cd73f865e5d7fd75b2f30c8e45f5.pdf">edición sobre la copia de Las Casas</a>, ULPGC.</li>
+    <li>Wikipedia, «<a href="https://en.wikipedia.org/wiki/Guanahani">Guanahani</a>»: nombre lucayo de la isla.</li>
+    <li>C. Brugnoni, «<a href="https://repositorio.uca.edu.ar/handle/123456789/18784">La protección constitucional argentina de los derechos lingüísticos de los pueblos indígenas…</a>», <i>El Derecho</i>, 2019.</li>
+    <li>M. I. Tato, «<a href="https://encyclopedia.1914-1918-online.net/article/yrigoyen-hipolito/">Yrigoyen, Hipólito</a>», 1914-1918-online.</li>
+    <li>Decreto del 4/10/1917, <a href="https://repository.mainlib.upd.edu.ph/omekas/files/original/6d97e3b3ef6c50f3d71cc67ab613be681cd1fbf8.pdf">reproducción en una publicación de época</a>; educ.ar, «<a href="https://www.educ.ar/recursos/92892/conmemoracion-del-12-de-octubre">Conmemoración del 12 de Octubre</a>»; <a href="https://www.canal26.com/general/sabe-porque-se-festeja-hoy-el-dia-de-la-raza--76268">Canal 26</a>: el nombre propuesto en 1913.</li>
+    <li>Argentina.gob.ar, «<a href="https://www.argentina.gob.ar/node/100452">La Constitución Nacional incorpora el Artículo 75 Inc. 17</a>».</li>
+    <li>INDEC, Censo 2022, vía Télam en <a href="https://hoydia.com.ar/sociedad/el-censo-2022-registro-en-el-pais-58-pueblos-indigenas-y-53-lenguas-ancestrales">Hoy Día</a>; <a href="https://www.unidiversidad.com.ar/en-mendoza-45-mil-personas-se-reconocieron-como-indigenas-o-descendientes-de-pueblos-originarios">Unidiversidad</a>; <a href="https://www.rionegro.com.ar/sociedad/neuquen-entre-las-cinco-provincias-con-mayor-cantidad-de-poblacion-indigena-segun-el-censo-2022-3457147/">Diario Río Negro</a>; <a href="https://grupoclarin-la-voz-prod.cdn.arcpublishing.com/ciudadanos/sangre-indigena-el-18-de-los-cordobeses-se-reconocen-descendientes-de-pueblos-originarios"><i>La Voz</i></a>; <a href="https://sedici.unlp.edu.ar/bitstream/handle/10915/196907/Documento_completo.pdf?sequence=1">SEDICI-UNLP</a>; <a href="https://misionesonline.net/2022/05/09/censo-2022-pueblos-originarios/">Misiones Online</a>.</li>
+    <li><a href="https://Indigenousnavigator.org/argentina">Indigenous Navigator</a>: ratificación del Convenio 169 de la OIT.</li>
+    <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/170000-174999/174389/norma.htm">Decreto 1584/2010</a> y resolución de validez de 2012, InfoLEG; <a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/330671/20250901">Resolución 139/2025</a>, Boletín Oficial.</li>
+    <li><a href="https://www.elmarplatense.com/el-gobierno-volvio-a-llamar-dia-de-la-raza-al-12-de-octubre-y-desato-la-polemica">El Marplatense</a> y <a href="https://www.lacapitalmdp.com/dia-de-la-raza-el-gobierno-encendio-la-polemica-por-el-12-de-octubre/">La Capital</a> (12/10/2024); <a href="https://www.lanacion.com.ar/politica/video-el-gobierno-difundio-un-spot-que-resalta-la-figura-de-colon-como-progreso-y-civilizacion-nid12102025/">La Nación</a> (12/10/2025).</li>
+    <li><a href="https://www.perfil.com/noticias/sociedad/feriado-del-12-de-octubre-2026-cuando-es-el-proximo-fin-de-semana-largo.phtml">Perfil</a> y <a href="https://www.noticiasnqn.com.ar/noticias/2026/10/06/355491-el-gobierno-recupero-el-nombre-dia-de-la-raza-en-el-calendario-oficial-de-2026">Noticias NQN</a> (2026); <a href="https://rest.hcdn.gob.ar/web/proyectos/290362/adjuntos/104881">proyecto de resolución</a>, Cámara de Diputados.</li>
+  </ol>
+
+  <div class="pie"><span>Quién cuenta el 12 de octubre · Notas docentes</span><span>2 / 2</span></div>
+</section>
+
+</body></html>
