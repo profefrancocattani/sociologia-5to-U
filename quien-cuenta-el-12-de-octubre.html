@@ -111,24 +111,6 @@ ul.preguntas-censo{padding-left:4.6mm; display:flex; flex-direction:column; gap:
 .pausa-ico::before,.pausa-ico::after{content:""; width:1.3mm; height:4.2mm; background:var(--tinta); display:block}
 .pausa span.t{font:600 8.4pt/1 var(--mono); letter-spacing:.14em; text-transform:uppercase}
 
-/* ---------- hoja docente ---------- */
-.notas-intro{display:grid; grid-template-columns:1fr 1fr; gap:5mm}
-.notas-intro > div{display:flex; flex-direction:column; gap:1.8mm; min-width:0}
-.notas-intro p{font-size:9.2pt; line-height:1.45}
-h2.seccion{font-family:var(--display); font-weight:600; font-variation-settings:"opsz" 72; font-size:19pt; line-height:1.08}
-h3{font:700 9.2pt/1.25 var(--texto)}
-.nota-pausa{display:grid; grid-template-columns:24mm 1fr; gap:4mm; border-top:.9pt solid var(--tinta); padding-top:2.6mm}
-.nota-pausa .cab{display:flex; flex-direction:column; gap:1mm}
-.nota-pausa .cab b{font-family:var(--display); font-weight:600; font-size:15pt; line-height:1}
-.nota-pausa .cab span{font:500 6.8pt/1.25 var(--mono); letter-spacing:.07em; text-transform:uppercase; color:var(--tinta-2)}
-.nota-pausa .cuerpo{display:grid; grid-template-columns:.85fr 1.15fr; gap:4mm; min-width:0}
-.nota-pausa .cuerpo > div{display:flex; flex-direction:column; gap:1.2mm; min-width:0}
-.nota-pausa ul{padding-left:3.6mm; display:flex; flex-direction:column; gap:1mm; font-size:9pt; line-height:1.4}
-.nota-pausa p{font-size:9pt; line-height:1.45}
-.nota-pausa .conecta{font:500 7pt/1.3 var(--mono); letter-spacing:.05em; color:var(--teal); text-transform:uppercase}
-.fuentes-lista{columns:2; column-gap:7mm; font-size:7.7pt; line-height:1.36; padding-left:4.5mm}
-.fuentes-lista li{break-inside:avoid; margin-bottom:1.5mm}
-.fuentes-lista a{word-break:break-word}
 .chico{font-size:8.3pt; line-height:1.4; color:var(--tinta-2)}
 
 /* ---------- pantalla angosta ---------- */
@@ -145,8 +127,6 @@ h3{font:700 9.2pt/1.25 var(--texto)}
   .glosa{flex-direction:row; flex-wrap:wrap; gap:.5mm 3mm}
   .glosa dd{margin-right:2mm}
   .texto p{font-size:12pt}
-  .notas-intro,.nota-pausa,.nota-pausa .cuerpo{grid-template-columns:1fr}
-  .fuentes-lista{columns:1}
 }
 
 /* ---------- impresión en blanco y negro ---------- */
@@ -174,10 +154,9 @@ h3{font:700 9.2pt/1.25 var(--texto)}
     <a href="#e4">1994</a>
     <a href="#e5">2022</a>
     <a href="#e6">2010</a>
-    <a href="#docente">Notas docentes</a>
   </nav>
 </header>
-<p class="aviso-pantalla">Ocho hojas A4 de lectura para fotocopiar y dos de notas docentes, que no se fotocopian. Se imprime en blanco y negro.</p>
+<p class="aviso-pantalla">Ocho hojas A4 de lectura para fotocopiar. Se imprime en blanco y negro.</p>
 
 <!-- ================= LECTURA 1 ================= -->
 <section class="hoja" id="lectura">
@@ -477,106 +456,6 @@ h3{font:700 9.2pt/1.25 var(--texto)}
   </div>
 
   <div class="pie"><span>Quién cuenta el 12 de octubre</span><span>Lectura · 8 / 8</span></div>
-</section>
-
-<!-- ================= NOTAS DOCENTES 1 ================= -->
-<section class="hoja" id="docente">
-  <div class="cabeza"><span>Notas docentes · no se fotocopian</span><span>Quién cuenta el 12 de octubre</span></div>
-
-  <div class="notas-intro">
-    <div>
-      <h2 class="seccion">Cómo se usa</h2>
-      <p>Unas 2.000 palabras: cerca de 15 minutos de lectura en voz alta, y alrededor de 30 con las siete pausas. Funciona en un módulo aparte, antes o después de «El nombre del lunes». Si va antes, las fuentes del momento 3 ya llegan conocidas y el grupo puede ir directo a las preguntas.</p>
-      <p>Un párrafo por lector. Los párrafos 3, 11, 16 y 23 tienen citas largas en lenguaje de época: conviene que los lea el docente o alguien que se ofrezca.</p>
-    </div>
-    <div>
-      <h2 class="seccion">Qué tiene y qué no</h2>
-      <p>El texto narra y cita; no tiene preguntas ni conclusiones. Las pausas son lugares para aclarar dudas, y la hoja de los estudiantes solo muestra el número. Abajo, para cada pausa, van las dudas que pueden aparecer y una aclaración breve.</p>
-      <p>Las estaciones 5 y 6 tienen datos que cambian. Están verificados al 13 de octubre de 2026.</p>
-    </div>
-  </div>
-
-  <div class="nota-pausa">
-    <div class="cab"><b>Pausa 1</b><span>Después del ¶4 · 1492</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>Si lo escribió Colón, ¿por qué «dos manos»?</li><li>¿Qué quiere decir «para que aprendan a hablar»?</li><li>¿Lucayos, taínos, indios?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>Las personas de Guanahaní tenían su lengua. En la frase de Colón, «hablar» significa hablar la lengua de Castilla. El diario llega a través de la copia de Las Casas, así que antes de leer qué dice un texto conviene saber quién lo escribió, para quién y quién lo copió.</p><p class="conecta">Clase · fuente 1 del momento 3</p></div>
-    </div>
-  </div>
-
-  <div class="nota-pausa">
-    <div class="cab"><b>Pausa 2</b><span>Después del ¶9 · 1853</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>¿Por qué «indios»?</li><li>¿Frontera con quién?</li><li>¿Seguía vigente en el siglo XX?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>«Indios» viene de la idea de Colón de haber llegado a las Indias, es decir, a Asia. Es la palabra del documento; en clase usamos «pueblos originarios» o «indígenas». Las «fronteras» eran líneas dentro del territorio que hoy es la Argentina, y las campañas militares de fines del siglo XIX ocuparon esas tierras. El texto rigió, con el número 67, hasta 1994.</p><p class="conecta">Clase · fuente 2 del momento 3</p></div>
-    </div>
-  </div>
-
-  <div class="nota-pausa">
-    <div class="cab"><b>Pausa 3</b><span>Después del ¶13 · 1917</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>¿Por qué un presidente argentino homenajea a España?</li><li>¿Qué quiere decir «raza» en este nombre?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>El contexto es la neutralidad en la Primera Guerra y la búsqueda de una identidad hispana frente al panamericanismo de Estados Unidos. En el hispanismo de la época, «raza» se usaba para un conjunto de pueblos unidos por lengua e historia; la biología actual no divide a la humanidad en razas. Quienes defienden el nombre lo leen en ese sentido cultural; quienes lo critican señalan que la palabra arrastra jerarquías entre grupos humanos.</p><p class="conecta">Clase · fuente 3 y momento 4</p></div>
-    </div>
-  </div>
-
-<div class="nota-pausa">
-    <div class="cab"><b>Pausa 4</b><span>Después del ¶16 · 1994</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>¿Para qué sirve la personería jurídica?</li><li>¿Por qué las tierras no se pueden vender?</li><li>¿Se cumple?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>Sin personería, una comunidad no puede, por ejemplo, firmar un convenio o reclamar ante la justicia como comunidad. Que la tierra comunitaria no se pueda vender ni embargar busca que no se pierda por deudas o por ventas individuales. Sobre el cumplimiento, el artículo solo dice qué debe hacer el Congreso: saberlo requiere otras fuentes, y señalarlo es un límite que vale el nivel 4 de la rúbrica.</p><p class="conecta">Clase · fuente 4 del momento 3</p></div>
-    </div>
-  </div>
-
-    <div class="pie"><span>Quién cuenta el 12 de octubre · Notas docentes</span><span>1 / 2</span></div>
-</section>
-
-<!-- ================= NOTAS DOCENTES 2 ================= -->
-<section class="hoja">
-  <div class="cabeza"><span>Notas docentes · no se fotocopian</span><span>Pausas 5 a 7 y fuentes</span></div>
-
-  <div class="nota-pausa">
-    <div class="cab"><b>Pausa 5</b><span>Después del ¶19 · 2022</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>¿Cómo sabe el censo quién es indígena?</li><li>¿Uno puede decir cualquier cosa?</li><li>¿Por qué aumentó tanto?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>El autorreconocimiento coincide con el Convenio 169 de la OIT, ratificado por la Argentina en 2000, que toma la conciencia de la propia identidad como criterio fundamental. Para el aumento hay más de una lectura: más personas que se reconocen y un cambio en la forma de preguntar, porque en 2022 la pregunta llegó a toda la población y antes se hacía a una parte.</p><p class="conecta">Clase · momento 2</p></div>
-    </div>
-  </div>
-
-  <div class="nota-pausa">
-    <div class="cab"><b>Pausa 6</b><span>Después del ¶24 · 2010–2017</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>¿Qué diferencia hay entre un decreto y una ley?</li><li>¿Qué es un decreto de necesidad y urgencia?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>La ley la sanciona el Congreso; el decreto lo firma el Poder Ejecutivo. El de necesidad y urgencia (art. 99, inc. 3) permite al Ejecutivo resolver un tema de ley cuando considera que no puede esperar el trámite del Congreso, que después lo revisa. Desde 2017 el nombre está en una ley: para cambiarlo hace falta una norma de ese mismo rango.</p><p class="conecta">Clase · momento 4</p></div>
-    </div>
-  </div>
-
-  <div class="nota-pausa">
-    <div class="cab"><b>Pausa 7</b><span>Después del ¶26 · 2024–2026</span></div>
-    <div class="cuerpo">
-      <div><h3>Dudas posibles</h3><ul><li>¿Entonces cómo se llama?</li><li>¿Quién tiene razón?</li></ul></div>
-      <div><h3>Para aclarar</h3><p>De hecho: la ley vigente dice «Día del Respeto a la Diversidad Cultural»; el calendario oficial 2026 dice «Día de la Raza»; el feriado es el mismo. Sobre quién tiene razón, el texto da los argumentos de cada parte con sus palabras: el decreto de 2010, la Casa Rosada en 2024 y el proyecto en Diputados. Vale el criterio del plan anual: se enseña el mecanismo y no la conclusión política. La pregunta que ordena es quién nombra, desde qué institución y con qué argumento.</p><p class="conecta">Clase · momento 4 y Bourdieu, capítulo 3</p></div>
-    </div>
-  </div>
-
-  <div class="flujo">
-    <h3>Fuentes</h3>
-  </div>
-  <ol class="fuentes-lista">
-    <li>C. Colón, <i>Diario del primer viaje</i> (11/10/1492) y carta del regreso (1493), <a href="https://www.uv.es/~fores/TxTCristobalColon.html">texto modernizado</a>, Universitat de València; <a href="https://mdc.ulpgc.es/files/original/6b1ece8364b7cd73f865e5d7fd75b2f30c8e45f5.pdf">edición sobre la copia de Las Casas</a>, ULPGC.</li>
-    <li>Wikipedia, «<a href="https://en.wikipedia.org/wiki/Guanahani">Guanahani</a>»: nombre lucayo de la isla.</li>
-    <li>C. Brugnoni, «<a href="https://repositorio.uca.edu.ar/handle/123456789/18784">La protección constitucional argentina de los derechos lingüísticos de los pueblos indígenas…</a>», <i>El Derecho</i>, 2019.</li>
-    <li>M. I. Tato, «<a href="https://encyclopedia.1914-1918-online.net/article/yrigoyen-hipolito/">Yrigoyen, Hipólito</a>», 1914-1918-online.</li>
-    <li>Decreto del 4/10/1917, <a href="https://repository.mainlib.upd.edu.ph/omekas/files/original/6d97e3b3ef6c50f3d71cc67ab613be681cd1fbf8.pdf">reproducción en una publicación de época</a>; educ.ar, «<a href="https://www.educ.ar/recursos/92892/conmemoracion-del-12-de-octubre">Conmemoración del 12 de Octubre</a>»; <a href="https://www.canal26.com/general/sabe-porque-se-festeja-hoy-el-dia-de-la-raza--76268">Canal 26</a>: el nombre propuesto en 1913.</li>
-    <li>Argentina.gob.ar, «<a href="https://www.argentina.gob.ar/node/100452">La Constitución Nacional incorpora el Artículo 75 Inc. 17</a>».</li>
-    <li>INDEC, Censo 2022, vía Télam en <a href="https://hoydia.com.ar/sociedad/el-censo-2022-registro-en-el-pais-58-pueblos-indigenas-y-53-lenguas-ancestrales">Hoy Día</a>; <a href="https://www.unidiversidad.com.ar/en-mendoza-45-mil-personas-se-reconocieron-como-indigenas-o-descendientes-de-pueblos-originarios">Unidiversidad</a>; <a href="https://www.rionegro.com.ar/sociedad/neuquen-entre-las-cinco-provincias-con-mayor-cantidad-de-poblacion-indigena-segun-el-censo-2022-3457147/">Diario Río Negro</a>; <a href="https://grupoclarin-la-voz-prod.cdn.arcpublishing.com/ciudadanos/sangre-indigena-el-18-de-los-cordobeses-se-reconocen-descendientes-de-pueblos-originarios"><i>La Voz</i></a>; <a href="https://sedici.unlp.edu.ar/bitstream/handle/10915/196907/Documento_completo.pdf?sequence=1">SEDICI-UNLP</a>; <a href="https://misionesonline.net/2022/05/09/censo-2022-pueblos-originarios/">Misiones Online</a>.</li>
-    <li><a href="https://Indigenousnavigator.org/argentina">Indigenous Navigator</a>: ratificación del Convenio 169 de la OIT.</li>
-    <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/170000-174999/174389/norma.htm">Decreto 1584/2010</a> y resolución de validez de 2012, InfoLEG; <a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/330671/20250901">Resolución 139/2025</a>, Boletín Oficial.</li>
-    <li><a href="https://www.elmarplatense.com/el-gobierno-volvio-a-llamar-dia-de-la-raza-al-12-de-octubre-y-desato-la-polemica">El Marplatense</a> y <a href="https://www.lacapitalmdp.com/dia-de-la-raza-el-gobierno-encendio-la-polemica-por-el-12-de-octubre/">La Capital</a> (12/10/2024); <a href="https://www.lanacion.com.ar/politica/video-el-gobierno-difundio-un-spot-que-resalta-la-figura-de-colon-como-progreso-y-civilizacion-nid12102025/">La Nación</a> (12/10/2025).</li>
-    <li><a href="https://www.perfil.com/noticias/sociedad/feriado-del-12-de-octubre-2026-cuando-es-el-proximo-fin-de-semana-largo.phtml">Perfil</a> y <a href="https://www.noticiasnqn.com.ar/noticias/2026/10/06/355491-el-gobierno-recupero-el-nombre-dia-de-la-raza-en-el-calendario-oficial-de-2026">Noticias NQN</a> (2026); <a href="https://rest.hcdn.gob.ar/web/proyectos/290362/adjuntos/104881">proyecto de resolución</a>, Cámara de Diputados.</li>
-  </ol>
-
-  <div class="pie"><span>Quién cuenta el 12 de octubre · Notas docentes</span><span>2 / 2</span></div>
 </section>
 
 </body></html>
