@@ -1,8 +1,9 @@
 # Sociología 5.º U · Lecturas
 
-Dashboard de cuarenta y tres fichas: las lecturas de los capítulos 1 a 3 (L1·2 a L3·13) y la Serie H (H-07 a H-27, La mala educación y Quién cuenta el 12 de octubre).
+Dashboard de cuarenta y tres fichas: las lecturas de los capítulos 1 a 3 (L1·2 a L3·13) y la Serie H (H-07 a H-27, La mala educación y Quién cuenta el 12 de octubre). Además, la unidad de cierre CRISIS: un libro y cinco cuadernos de trabajo.
 
 - [Dashboard](https://profefrancocattani.github.io/sociologia-5to-U/)
+- [Unidad CRISIS](https://profefrancocattani.github.io/sociologia-5to-U/crisis/)
 
 ## Capítulo 1 · Comte y Durkheim
 
@@ -44,6 +45,18 @@ Dashboard de cuarenta y tres fichas: las lecturas de los capítulos 1 a 3 (L1·2
 - [L3·11 · El mismo artículo, dos lecturas](https://profefrancocattani.github.io/sociologia-5to-U/l3-11-el-mismo-articulo-dos-lecturas.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/l3-11-el-mismo-articulo-dos-lecturas.pdf)
 - [L3·12 · Una pequeña oportunidad](https://profefrancocattani.github.io/sociologia-5to-U/l3-12-una-pequena-oportunidad.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/l3-12-una-pequena-oportunidad.pdf)
 - [L3·13 · Seis preguntas para un artículo](https://profefrancocattani.github.io/sociologia-5to-U/l3-13-seis-preguntas-para-un-articulo.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/l3-13-seis-preguntas-para-un-articulo.pdf)
+
+## Unidad de cierre · CRISIS
+
+Trece crisis de la historia humana, contadas desde sus fuentes. El libro acompaña; cada cuaderno ocupa una clase de 60 minutos y trabaja una parte (16 páginas A4, documentos sin firma, acta, firmas, hoja de trabajo y ficha).
+
+- [Portada de la unidad](https://profefrancocattani.github.io/sociologia-5to-U/crisis/)
+- [Libro · CRISIS](https://profefrancocattani.github.io/sociologia-5to-U/crisis/libro.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/libro.pdf)
+- [Cuaderno 01 · ¿A quién le echamos la culpa?](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-01-a-quien-le-echamos-la-culpa.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-01-a-quien-le-echamos-la-culpa.pdf)
+- [Cuaderno 02 · Diez mil por día](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-02-diez-mil-por-dia.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-02-diez-mil-por-dia.pdf)
+- [Cuaderno 03 · ¿Trece o cien millones?](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-03-trece-o-cien-millones.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-03-trece-o-cien-millones.pdf)
+- [Cuaderno 04 · Un cuarto de acre](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-04-un-cuarto-de-acre.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-04-un-cuarto-de-acre.pdf)
+- [Cuaderno 05 · Los seis, sobre las trece](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-05-los-seis-sobre-las-trece.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-05-los-seis-sobre-las-trece.pdf)
 
 ## Serie H y lecturas sueltas
 
