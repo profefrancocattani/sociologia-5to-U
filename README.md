@@ -1,6 +1,6 @@
 # Sociología 5.º U · Lecturas
 
-Dashboard de cuarenta y tres fichas: las lecturas de los capítulos 1 a 3 (L1·2 a L3·13) y la Serie H (H-07 a H-27, La mala educación y Quién cuenta el 12 de octubre). Además, la unidad de cierre CRISIS: un libro y cinco cuadernos de trabajo.
+Dashboard de cuarenta y tres fichas: las lecturas de los capítulos 1 a 3 (L1·2 a L3·13) y la Serie H (H-07 a H-27, La mala educación y Quién cuenta el 12 de octubre). Además, la unidad de cierre CRISIS: un libro, cinco cuadernos de trabajo y la lectura del capítulo 6.
 
 - [Dashboard](https://profefrancocattani.github.io/sociologia-5to-U/)
 - [Unidad CRISIS](https://profefrancocattani.github.io/sociologia-5to-U/crisis/)
@@ -57,6 +57,7 @@ Trece crisis de la historia humana, contadas desde sus fuentes. El libro acompa�
 - [Cuaderno 03 · ¿Trece o cien millones?](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-03-trece-o-cien-millones.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-03-trece-o-cien-millones.pdf)
 - [Cuaderno 04 · Un cuarto de acre](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-04-un-cuarto-de-acre.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-04-un-cuarto-de-acre.pdf)
 - [Cuaderno 05 · Los seis, sobre las trece](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-05-los-seis-sobre-las-trece.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-05-los-seis-sobre-las-trece.pdf)
+- [Lectura · Capítulo 6 · Las diez plagas](https://profefrancocattani.github.io/sociologia-5to-U/crisis/lectura-06-las-diez-plagas.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/lectura-06-las-diez-plagas.pdf)
 
 ## Serie H y lecturas sueltas
 
