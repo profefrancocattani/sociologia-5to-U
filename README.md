@@ -58,6 +58,7 @@ Trece crisis de la historia humana, contadas desde sus fuentes. El libro acompa�
 - [Cuaderno 04 · Un cuarto de acre](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-04-un-cuarto-de-acre.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-04-un-cuarto-de-acre.pdf)
 - [Cuaderno 05 · Los seis, sobre las trece](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-05-los-seis-sobre-las-trece.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/cuaderno-05-los-seis-sobre-las-trece.pdf)
 - [Lectura · Capítulo 6 · Las diez plagas](https://profefrancocattani.github.io/sociologia-5to-U/crisis/lectura-06-las-diez-plagas.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/lectura-06-las-diez-plagas.pdf)
+- [Lectura · Capítulo 12 · Un colosal embrollo](https://profefrancocattani.github.io/sociologia-5to-U/crisis/lectura-12-un-colosal-embrollo.html) · [PDF](https://profefrancocattani.github.io/sociologia-5to-U/crisis/lectura-12-un-colosal-embrollo.pdf): el ejemplo de referencia de la Serie H
 
 ## Serie H y lecturas sueltas
 
